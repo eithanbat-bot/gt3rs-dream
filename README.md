@@ -1,5 +1,11 @@
 # GT3 RS Dream — LeadLift revenue project
 
+**Live customer-facing site:** https://leadlift-gt3rs.vercel.app/
+
+**Industry guides:** https://leadlift-gt3rs.vercel.app/solar-enquiry-checklist.html and https://leadlift-gt3rs.vercel.app/property-maintenance-enquiry-checklist.html
+
+**Deployment:** Vercel project `leadlift-gt3rs` (production manually deployed from repository files until GitHub ↔ Vercel integration is installed).
+
 This repository is the operating code for **LeadLift Revenue Systems**, a South African B2B lead-conversion implementation service.
 
 ## What is real
