@@ -99,7 +99,7 @@ Deno.serve(async (req: Request) => {
   const result = await db.from("inbound_leads").insert({
     business_name, contact_name, email, phone, industry,
     monthly_enquiries, current_process, challenge,
-    source: "gt3rs-marketing-site", consent_to_contact: true, consent_at: new Date().toISOString()
+    source: "gt3rs-marketing-site", utm_source:clean(body.utm_source,60),utm_medium:clean(body.utm_medium,60),utm_campaign:clean(body.utm_campaign,60), consent_to_contact: true, consent_at: new Date().toISOString()
   }).select("id").single();
   if (result.error) return json({ error: "We could not save your request. Please try again later." }, 503, origin);
   return json({ ok: true, reference: result.data.id }, 201, origin);
