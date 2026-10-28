@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081b28">
+  <meta name="description" content="LeadLift helps South African high-value service businesses respond to new enquiries, qualify interested buyers and follow up consistently. Request an implementation demo.">
+  <meta property="og:title" content="LeadLift | Turn business enquiries into a reliable sales process">
+  <meta property="og:description" content="Lead response and appointment workflow implementation for South African service businesses.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://leadlift-gt3rs.vercel.app/">
+  <title>LeadLift — Lead response systems for service businesses</title>
+  <style>
+  :root{--ink:#102b39;--deep:#081b28;--deep2:#102e3a;--teal:#63e9c2;--mint:#c0f6e5;--cream:#f6f7f1;--muted:#637581;--stroke:#dce6e4;--white:#fff;--shadow:0 18px 55px rgba(14,38,52,.1);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;scroll-behavior:smooth;color:var(--ink)}
+  *{box-sizing:border-box}body{margin:0;background:var(--cream);line-height:1.55}a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #1c9e83;outline-offset:3px}button,input,textarea,select{font:inherit}button{cursor:pointer}
+  .container{max-width:1160px;margin:0 auto;padding:0 26px}.nav{background:var(--deep);border-bottom:1px solid #27404b;color:white;position:sticky;top:0;z-index:20}.nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:flex;align-items:center;gap:12px;font-size:22px;font-weight:850;letter-spacing:-.06em}.mark{display:grid;place-items:center;width:33px;height:33px;border:2px solid var(--teal);border-radius:10px;color:var(--teal);font-size:17px;letter-spacing:0;transform:rotate(-9deg)}.navlinks{display:flex;gap:27px;align-items:center;font-size:13px;color:#d5e6e7}.navlinks a:hover{color:var(--teal)}.nav-cta{border:1px solid var(--teal);border-radius:8px;color:var(--deep)!important;background:var(--teal);padding:10px 16px;font-weight:750}.menu{display:none;background:transparent;border:1px solid #44636e;color:#fff;padding:9px 12px;border-radius:7px}
+  .hero{background:radial-gradient(circle at 73% 35%,#184c4e 0%,#0d2f39 25%,var(--deep) 63%);color:white;overflow:hidden}.hero-grid{min-height:645px;display:grid;grid-template-columns:1.07fr .93fr;gap:42px;align-items:center;padding-top:76px;padding-bottom:92px}.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--teal)}.eyebrow:before{content:"";width:19px;height:2px;background:var(--teal)}h1{font-size:clamp(44px,5.8vw,78px);line-height:1.045;letter-spacing:-.075em;margin:22px 0 26px;font-weight:850}h1 em{font-style:normal;color:var(--teal)}.lead{max-width:530px;color:#bdcfd4;font-size:17px;line-height:1.8}.hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:32px}.btn{display:inline-flex;justify-content:center;align-items:center;gap:9px;border-radius:9px;padding:14px 22px;font-weight:780;border:1px solid transparent;transition:transform .15s ease,background .15s ease}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--teal);color:#072525}.btn-secondary{border-color:#678087;color:#e7f3f3;background:#ffffff08}.trust{display:flex;flex-wrap:wrap;gap:22px;margin-top:37px;font-size:12px;color:#a6c1c3}.trust span:before{content:"✓";margin-right:7px;color:var(--teal)}
+  .illustration{position:relative;padding:15px}.halo{position:absolute;inset:2% 0;border-radius:50%;background:radial-gradient(circle,#4ccaaa22,transparent 66%);filter:blur(12px)}.stack{position:relative;z-index:1;border:1px solid #4e7681;background:#0d2733;border-radius:18px;box-shadow:0 25px 90px #0007;overflow:hidden;transform:rotate(1deg)}.stack-top{display:flex;justify-content:space-between;align-items:center;padding:17px 20px;border-bottom:1px solid #2f5260;color:#adc8c9;font-size:12px}.dots{display:flex;gap:6px}.dots i{width:7px;height:7px;background:#65818c;border-radius:50%;display:block}.stack-body{padding:19px}.msg{background:#163845;border:1px solid #2f5662;padding:18px;border-radius:12px;margin-bottom:12px}.msg .small,.action .small{display:block;font-size:11px;color:#9dbdc1;margin-bottom:9px;text-transform:uppercase;letter-spacing:.11em}.msg strong{font-size:15px}.msg p{margin:8px 0 0;color:#c9ddde;font-size:13px}.flow-arrow{text-align:center;color:var(--teal);font-size:22px;line-height:1;margin:12px}.action{border:1px solid #3a796d;background:#103c3d;padding:18px;border-radius:12px}.action strong{color:var(--teal);font-size:15px}.action ul{padding-left:17px;margin:9px 0 0;color:#cfe2df;font-size:12px}.hero-note{text-align:right;color:#8ba9ad;font-size:11px;margin-top:12px}
+  section{scroll-margin-top:85px}.section{padding:93px 0}.section-white{background:white}.center{text-align:center}.section-kicker{font-weight:800;color:#12826c;text-transform:uppercase;letter-spacing:.16em;font-size:12px}h2{font-size:clamp(31px,4vw,47px);letter-spacing:-.055em;line-height:1.15;margin:13px 0 18px}.section-intro{color:var(--muted);font-size:16px;max-width:700px;margin:0 auto 44px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--white);border:1px solid var(--stroke);padding:29px;border-radius:15px;box-shadow:0 4px 16px #18344206}.card-icon{background:#e4f6ed;color:#137561;display:grid;place-items:center;width:44px;height:44px;border-radius:12px;font-size:22px}.card h3{font-size:19px;letter-spacing:-.025em;margin:22px 0 10px}.card p{color:var(--muted);font-size:14px;margin:0}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:step}.step{padding:22px;border-left:2px solid #b0ddd2}.step:before{counter-increment:step;content:"0"counter(step);color:#0d9478;font-size:31px;font-weight:850;letter-spacing:-.05em}.step h3{margin:17px 0 6px;font-size:17px}.step p{font-size:13px;color:var(--muted);margin:0}
+  .showcase{background:var(--deep);color:#fff}.showgrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:center}.showcase p{color:#b5ccd0}.demo{background:#fff;border-radius:16px;padding:25px;color:var(--ink);box-shadow:0 19px 60px #0004}.demo label,.form label{display:block;font-weight:750;font-size:13px;margin-bottom:7px}.demo select,.demo textarea,.form input,.form select,.form textarea{border:1px solid #ccdad8;border-radius:8px;padding:12px 13px;background:white;color:var(--ink);width:100%;min-width:0}.demo textarea{min-height:80px;resize:vertical}.demo .btn{margin-top:12px}.demo-output{display:none;background:#f0faf6;border:1px solid #c9e6d8;border-radius:9px;padding:17px;margin-top:16px;font-size:13px}.demo-output.visible{display:block}.score{font-size:27px;color:#107963;font-weight:850}.disclaimer{font-size:11px;color:var(--muted);margin-top:13px}
+  .pricing{display:grid;grid-template-columns:1fr 1fr;gap:23px;max-width:850px;margin:37px auto}.price{padding:33px;background:#fff;border:1px solid var(--stroke);border-radius:16px;box-shadow:var(--shadow)}.price:nth-child(2){border:2px solid #389b84}.price-kicker{text-transform:uppercase;color:#337b6c;letter-spacing:.1em;font-size:11px;font-weight:800}.price-number{font-size:37px;letter-spacing:-.05em;font-weight:860;line-height:1.3}.price p{font-size:13px;color:var(--muted)}.price ul{padding-left:18px;color:#455d64;font-size:14px}.price li{margin:9px 0}.fine{color:#61717b;font-size:12px;text-align:center;max-width:760px;margin:20px auto 0}
+  .contact{background:#edf4f0}.contactgrid{display:grid;grid-template-columns:.85fr 1.15fr;gap:68px;align-items:start}.contactaside p{color:#557079;font-size:16px}.contactaside ul{padding-left:20px;color:#557079;line-height:2}.form{background:#fff;padding:35px;border:1px solid #d7e6e1;border-radius:18px;box-shadow:var(--shadow)}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.form-field{margin-bottom:17px}.form .required{color:#b03e38}.form textarea{min-height:90px;resize:vertical}.consent{display:flex!important;gap:10px;align-items:flex-start;font-size:12px!important;font-weight:500!important;color:#4a6165}.consent input{width:auto;min-width:17px;margin-top:3px}.status{font-size:13px;margin-top:15px;min-height:18px}.status.error{color:#a12a2a}.status.ok{color:#12674c}.hp{position:absolute!important;width:1px;height:1px;overflow:hidden;left:-9999px}
+  .faq{max-width:840px;margin:0 auto}.faq details{background:#fff;border:1px solid #dce5e0;padding:19px 23px;border-radius:10px;margin:9px 0}.faq summary{cursor:pointer;font-weight:750}.faq p{font-size:14px;color:var(--muted);margin-bottom:0}.footer{background:#061622;color:#abc0c3;padding:50px 0}.footergrid{display:flex;justify-content:space-between;gap:35px;flex-wrap:wrap}.footer p{max-width:550px;font-size:13px}.footer a{color:#e6f9f4}.footer a:hover{color:var(--teal)}.footlinks{display:flex;gap:22px;flex-wrap:wrap;font-size:13px}
+  @media(max-width:920px){.hero-grid,.showgrid,.contactgrid{grid-template-columns:1fr}.hero-grid{gap:20px;min-height:auto;padding-top:70px}.hero-grid .illustration{max-width:610px;margin:0 auto;width:100%}.cards{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.contactgrid{gap:25px}.navlinks{gap:12px}}
+  @media(max-width:650px){.container{padding:0 18px}.nav-inner{height:65px}.menu{display:block}.navlinks{position:absolute;top:65px;left:0;right:0;background:#0a2430;padding:18px;display:none;flex-direction:column;align-items:stretch}.navlinks.open{display:flex}.navlinks a{text-align:center}.hero-grid{padding-top:50px;padding-bottom:68px}h1{font-size:44px}.lead{font-size:15px}.section{padding:68px 0}.cards,.steps,.pricing,.formgrid{grid-template-columns:1fr}.card{padding:25px}.form{padding:24px 19px}.demo{padding:20px}.hero-actions .btn{width:100%}.footergrid{display:block}.footlinks{margin-top:25px}}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="brand" aria-label="LeadLift home"><span class="mark">↗</span> LeadLift<span style="color:var(--teal)">.</span></a>
+      <button class="menu" id="menu" aria-label="Toggle navigation" aria-expanded="false">Menu ☰</button>
+      <nav class="navlinks" id="navlinks" aria-label="Main navigation">
+        <a href="#who">Who it's for</a><a href="#process">How it works</a><a href="#demo">See the demo</a><a href="#pricing">Pricing</a>
+        <a href="#contact" class="nav-cta">Request a demo ↗</a>
+      </nav>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Lead conversion systems · South Africa</div>
+          <h1>More enquiries are useless <em>if nobody follows up.</em></h1>
+          <p class="lead">We help service businesses design a faster, more consistent response process: capture new enquiries, qualify potential buyers and make the next step clear.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#contact">Request an implementation demo ↗</a><a class="btn btn-secondary" href="#demo">Try the example workflow →</a></div>
+          <div class="trust"><span>Built around your actual enquiries</span><span>No appointment guarantees</span><span>Clear implementation scope</span></div>
+        </div>
+        <div class="illustration" aria-label="Illustration of a lead being qualified">
+          <div class="halo"></div>
+          <div class="stack">
+            <div class="stack-top"><span>ILLUSTRATIVE LEAD WORKFLOW</span><div class="dots"><i></i><i></i><i></i></div></div>
+            <div class="stack-body">
+              <div class="msg"><span class="small">Incoming enquiry · 09:12</span><strong>“Can you install solar at my office?”</strong><p>We're comparing options for next month and want a quote for a 12 kW system.</p></div>
+              <div class="flow-arrow">↓</div>
+              <div class="action"><span class="small">Suggested next action</span><strong>High-intent enquiry — review promptly</strong><ul><li>Confirm area, property and timeline</li><li>Request recent electricity usage</li><li>Offer a consultation slot after qualification</li></ul></div>
+            </div>
+          </div>
+          <div class="hero-note">Example only — no messages are sent or booked automatically.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="who">
+      <div class="container center">
+        <div class="section-kicker">Designed for high-consideration sales</div>
+        <h2>The gap between “interested” and “booked”</h2>
+        <p class="section-intro">When enquiries arrive through email, WhatsApp, forms and social pages, small teams can lose track of what happened next. The solution starts with a reliable process—not a chatbot claiming to close deals.</p>
+        <div class="cards" style="text-align:left">
+          <article class="card"><div class="card-icon">☀</div><h3>Solar & energy installers</h3><p>Collect requirements, route technical questions to a human and keep site assessments from disappearing into inboxes.</p></article>
+          <article class="card"><div class="card-icon">⌂</div><h3>Property service teams</h3><p>Make inspection, quote and callback requests easy to triage by area, urgency and service type.</p></article>
+          <article class="card"><div class="card-icon">◇</div><h3>High-value local services</h3><p>Professional, home improvement and specialist services that need a consistent handoff from enquiry to consultation.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white" id="process">
+      <div class="container center">
+        <div class="section-kicker">A practical implementation</div><h2>Four steps. No mystery software.</h2>
+        <p class="section-intro">We begin with the tools you already use. Integrations, account permissions and costs are confirmed before anything is switched on.</p>
+        <div class="steps" style="text-align:left">
+          <div class="step"><h3>Map the enquiry</h3><p>Identify every inbound channel and where responses stall.</p></div>
+          <div class="step"><h3>Design qualification</h3><p>Choose the questions and routing rules your sales team can actually use.</p></div>
+          <div class="step"><h3>Build & test</h3><p>Implement approved workflows, test sample leads and handovers.</p></div>
+          <div class="step"><h3>Review & refine</h3><p>Monitor the agreed process and adjust based on real team feedback.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section showcase" id="demo">
+      <div class="container showgrid">
+        <div><div class="eyebrow">Try the logic</div><h2>See a lead response decision in seconds.</h2><p>Use the simple example. It flags a potential buyer's urgency and provides a draft human-reviewed response. A real workflow is tailored after discovery and testing.</p><p class="disclaimer" style="color:#b0c7c8">This demonstration uses fixed rules in your browser, not an AI model, and it does not send messages, save contact data, or connect to third-party software.</p></div>
+        <div class="demo">
+          <label for="scenario">Example enquiry</label>
+          <select id="scenario"><option value="solar">Solar installation quote</option><option value="property">Urgent property repair</option><option value="general">General price enquiry</option></select>
+          <div style="height:14px"></div><label for="sample">Incoming message</label>
+          <textarea id="sample">Hi, we're looking for a 12kW solar installation for our business next month. Can someone arrange a quote this week?</textarea>
+          <button class="btn btn-primary" id="scoreBtn" type="button">Analyse example ↗</button>
+          <div id="demoOut" class="demo-output" aria-live="polite"></div>
+          <div class="disclaimer">Sample output only. A trained team member should review responses before sending.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="container center">
+        <div class="section-kicker">Transparent starting figures</div><h2>Scoped to your business, not a promise.</h2>
+        <p class="section-intro">These are indicative starting prices. The first conversation is to check whether an implementation would be appropriate for your enquiry volume and existing systems.</p>
+        <div class="pricing" style="text-align:left">
+          <div class="price"><div class="price-kicker">One-time implementation</div><div class="price-number">From R25,000</div><p>Discovery, workflow configuration and implementation scope.</p><ul><li>Enquiry flow mapping</li><li>Qualification rules and handoffs</li><li>Testing and documented go-live checklist</li></ul></div>
+          <div class="price"><div class="price-kicker">Optional ongoing management</div><div class="price-number">From R7,500 <span style="font-size:15px;font-weight:600">/ month</span></div><p>Refinement and monitoring after an agreed implementation.</p><ul><li>Workflow maintenance within scope</li><li>Operational checks and issue handling</li><li>Monthly process review</li></ul></div>
+        </div>
+        <p class="fine">Final pricing depends on complexity, volume and integrations. Messaging, CRM, WhatsApp, calendar or other third-party subscription charges are not included unless explicitly quoted. A deposit is not collected on this site.</p>
+      </div>
+    </section>
+
+    <section class="section section-white" id="faq"><div class="container"><div class="section-kicker center">Common questions</div><h2 class="center">Before we work together</h2><div class="faq">
+      <details><summary>Does LeadLift guarantee more sales?</summary><p>No. The service aims to improve lead-handling consistency. Results depend on your traffic, offer, pricing, team and follow-up. We do not guarantee revenue or appointments.</p></details>
+      <details><summary>Is WhatsApp, email, calendar or CRM already connected?</summary><p>No. Any third-party connection requires supported accounts, permissions, testing and agreement on scope. The demo is self-contained and does not send messages.</p></details>
+      <details><summary>Do you replace our sales staff?</summary><p>No. The aim is to make qualification and human handoff more consistent, not to misrepresent automation as human communication.</p></details>
+      <details><summary>What happens after I request a demo?</summary><p>Your request is recorded for review. A response and appointment are not automatic, and no payment is taken through this form.</p></details>
+    </div></div></section>
+
+    <section class="section contact" id="contact">
+      <div class="container contactgrid">
+        <div class="contactaside"><div class="section-kicker">Start with your current process</div><h2>Show us where enquiries get stuck.</h2><p>Tell us the basics. We'll use your details to evaluate your request and respond if the scope is suitable.</p><ul><li>No obligation to buy</li><li>No fake automated booking confirmation</li><li>No third-party messaging without authorization</li></ul><p class="fine" style="text-align:left;margin-left:0">Please don't include passwords, private customer lists or sensitive records.</p></div>
+        <div class="form">
+          <form id="leadForm" novalidate>
+            <div class="formgrid">
+              <div class="form-field"><label for="business_name">Business name <span class="required">*</span></label><input id="business_name" name="business_name" required minlength="2" maxlength="120" autocomplete="organization"></div>
+              <div class="form-field"><label for="contact_name">Your name <span class="required">*</span></label><input id="contact_name" name="contact_name" required minlength="2" maxlength="100" autocomplete="name"></div>
+              <div class="form-field"><label for="email">Work email <span class="required">*</span></label><input id="email" name="email" type="email" required maxlength="180" autocomplete="email"></div>
+              <div class="form-field"><label for="phone">Phone (optional)</label><input id="phone" name="phone" type="tel" maxlength="35" autocomplete="tel"></div>
+              <div class="form-field"><label for="industry">Industry</label><select id="industry" name="industry"><option>Solar installation</option><option>Property services</option><option>Home improvement</option><option>Professional services</option><option>Other</option></select></div>
+              <div class="form-field"><label for="monthly_enquiries">Monthly enquiries</label><select id="monthly_enquiries" name="monthly_enquiries"><option>Not sure</option><option>Fewer than 10</option><option>10–30</option><option>31–60</option><option>More than 60</option></select></div>
+            </div>
+            <div class="form-field"><label for="current_process">How do you currently respond?</label><textarea id="current_process" name="current_process" maxlength="800" placeholder="Example: A team member monitors WhatsApp and forwards leads to the sales manager."></textarea></div>
+            <div class="form-field"><label for="challenge">Biggest challenge</label><textarea id="challenge" name="challenge" maxlength="1500" placeholder="What would you like your team to handle more reliably?"></textarea></div>
+            <div class="hp" aria-hidden="true"><label for="website_url">Leave this field empty</label><input id="website_url" name="website_url" type="text" tabindex="-1" autocomplete="off"></div>
+            <label class="consent" for="consent_to_contact"><input type="checkbox" id="consent_to_contact" name="consent_to_contact" required><span>I agree that LeadLift may process the details in this form to respond to my specific enquiry. I understand this is not consent to unrelated promotional messages. I have read the <a href="/privacy.html" target="_blank" rel="noopener" style="text-decoration:underline;color:#126d58">privacy notice</a>. <span class="required">*</span></span></label>
+            <button type="submit" class="btn btn-primary" style="width:100%;margin-top:22px" id="submitBtn">Send demo request ↗</button>
+            <div id="formStatus" class="status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container footergrid"><div><div class="brand"><span class="mark">↗</span> LeadLift.</div><p>Lead-response workflow implementation for service businesses in South Africa. LeadLift is a developing service offer. Outcomes and integrations are agreed individually, not assumed.</p><small>© <span id="year">2026</span> LeadLift · No guarantee of bookings or revenue</small></div><nav class="footlinks"><a href="#top">Top</a><a href="#contact">Request a demo</a><a href="/privacy.html">Privacy</a><a href="https://lead-lift-revenue-systems-d1d564e6.base44.app" rel="noopener" target="_blank">Original product demo ↗</a></nav></div></footer>
+  <script>
+    const menu=document.getElementById('menu'), links=document.getElementById('navlinks');
+    menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});
+    links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false');}));
+    document.getElementById('year').textContent=String(new Date().getFullYear());
+    const samples={
+      solar:'Hi, we are looking for a 12kW solar installation for our business next month. Can someone arrange a quote this week?',
+      property:'The water pipe at our office has burst. We need a plumber today in Johannesburg. Please call us back.',
+      general:'Please send information about your prices. We are comparing companies.'
+    };
+    document.getElementById('scenario').addEventListener('change',e=>{document.getElementById('sample').value=samples[e.target.value];document.getElementById('demoOut').classList.remove('visible');});
+    document.getElementById('scoreBtn').addEventListener('click',()=>{
+      const text=document.getElementById('sample').value.trim(), lower=text.toLowerCase();
+      const hasTime=/today|urgent|asap|this week|next month|tomorrow|immediately|soon/.test(lower);
+      const hasDetail=/solar|kw|installation|pipe|burst|office|business|quote|water|plumber|property/.test(lower);
+      const hasIntent=/quote|book|arrange|call|need|looking for|install/.test(lower);
+      const score=Math.min(100,25+(hasTime?30:0)+(hasDetail?25:0)+(hasIntent?20:0));
+      const priority=score>=75?'High priority for human review':score>=50?'Qualified enquiry to review':'Needs more information';
+      const reply=hasTime?'Thanks for your enquiry. To help the right person respond, could you confirm your location, preferred timeframe and best contact method?':'Thanks for getting in touch. Could you share a little more about what you need and the best way to reach you?';
+      const out=document.getElementById('demoOut');
+      out.replaceChildren();
+      const div=document.createElement('div');div.className='score';div.textContent=String(score)+'/100';
+      const strong=document.createElement('strong');strong.textContent=priority;
+      const p=document.createElement('p');p.textContent='Draft response (review before sending): “'+reply+'”';
+      const note=document.createElement('p');note.textContent='Suggested next steps: confirm contact permission → collect missing requirements → assign to a team member → log follow-up.';
+      out.append(div,strong,p,note);
+      out.classList.add('visible');
+    });
+    const form=document.getElementById('leadForm'),submit=document.getElementById('submitBtn'),status=document.getElementById('formStatus');
+    form.addEventListener('submit',async e=>{
+      e.preventDefault();
+      status.className='status';status.textContent='';
+      if(!form.reportValidity()){status.textContent='Please check the required fields.';status.className='status error';return;}
+      const fd=new FormData(form);
+      const payload=Object.fromEntries(fd.entries());payload.consent_to_contact=document.getElementById('consent_to_contact').checked;
+      submit.disabled=true;submit.textContent='Sending…';
+      try{
+        const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),15000);
+        let response;
+        try{response=await fetch('https://rqbvdgzjpepgobablqhv.supabase.co/functions/v1/submit-lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),signal:controller.signal});}
+        finally{clearTimeout(timer);}
+        const data=await response.json().catch(()=>({}));
+        if(!response.ok)throw Error(data.error||'The request could not be submitted.');
+        status.className='status ok';status.textContent='Thank you — your request was received for review. This is not an appointment confirmation.';
+        form.reset();
+      }catch(err){status.className='status error';status.textContent=err.name==='AbortError'?'Request timed out. Please retry once.':(err.message||'Unable to send request.');}
+      finally{submit.disabled=false;submit.textContent='Send demo request ↗';}
+    });
+  </script>
+</body>
+</html>
