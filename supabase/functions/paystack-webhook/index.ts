@@ -6,7 +6,7 @@ function equalHex(a:string,b:string){if(a.length!==b.length)return false;let c=0
 Deno.serve(async(req:Request)=>{
 if(req.method!=="POST")return reply(405);
 const secret=Deno.env.get("PAYSTACK_SECRET_KEY");
-if(!secret)return reply(503);
+if(!secret?.startsWith("sk_live_"))return reply(503);
 const raw=await req.text();
 if(raw.length>32000)return reply(413);
 const sig=req.headers.get("x-paystack-signature")||"";
