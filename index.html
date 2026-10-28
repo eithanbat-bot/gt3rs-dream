@@ -185,7 +185,7 @@
       status.className='status';status.textContent='';
       if(!form.reportValidity()){status.textContent='Please check the required fields.';status.className='status error';return;}
       const fd=new FormData(form);
-      const payload=Object.fromEntries(fd.entries());payload.consent_to_contact=document.getElementById('consent_to_contact').checked;
+      const payload=Object.fromEntries(fd.entries());payload.consent_to_contact=document.getElementById('consent_to_contact').checked;const qs=new URLSearchParams(location.search);for(const k of ['utm_source','utm_medium','utm_campaign'])payload[k]=(qs.get(k)||'').slice(0,60);
       submit.disabled=true;submit.textContent='Sending…';
       try{
         const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),15000);
