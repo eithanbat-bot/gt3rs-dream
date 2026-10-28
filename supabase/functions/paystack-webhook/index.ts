@@ -20,8 +20,8 @@ if(!/^LL[a-f0-9]{32}$/.test(ref))return reply(200);
 const db=createClient(Deno.env.get("SUPABASE_URL")!,Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,{auth:{persistSession:false}});
 const {data:order}=await db.from("client_orders").select("*").eq("gateway_reference",ref).maybeSingle();
 if(!order)return reply(200);
-if(order.status==="paid")return reply(200);
-if(order.status!=="pending")return reply(409);
+if(order.status==="paid"){\n const {data:ws}=await db.from("client_workspaces").select("status").eq("id",order.workspace_id).maybeSingle();\n if(ws?.status==="active")return reply(200);\n // Recover if a prior attempt recorded the payment but could not activate access.\n}
+if(order.status!=="pending"&&order.status!=="paid")return reply(409);
 if(Number(evt.data.amount)!==order.amount_subunits||evt.data.currency!=="ZAR")return reply(400);
 // Re-query Paystack so a forged callback or redirect can never activate a workspace.
 const verification=await fetch("https://api.paystack.co/transaction/verify/"+encodeURIComponent(ref),{headers:{Authorization:"Bearer "+secret}}).catch(()=>null);
@@ -30,10 +30,13 @@ const verify:any=await verification.json().catch(()=>null);
 if(!verify?.status||verify?.data?.status!=="success"||verify.data.reference!==ref||
 Number(verify.data.amount)!==order.amount_subunits||verify.data.currency!=="ZAR")return reply(400);
 const now=new Date(),expires=new Date(now);expires.setUTCMonth(expires.getUTCMonth()+6);
-const {data:updated,error:e1}=await db.from("client_orders").update({status:"paid",gateway_transaction_id:String(verify.data.id),paid_at:now.toISOString()}).eq("id",order.id).eq("status","pending").select("id").maybeSingle();
+if(order.status==="pending"){
+const {error:e1}=await db.from("client_orders").update({status:"paid",gateway_transaction_id:String(verify.data.id),paid_at:now.toISOString()}).eq("id",order.id).eq("status","pending");
 if(e1)return reply(503);
-if(!updated)return reply(200);
-const {error:e2}=await db.from("client_workspaces").update({status:"active",activated_at:now.toISOString(),access_expires_at:expires.toISOString()}).eq("id",order.workspace_id).eq("status","pending_payment");
+}
+const originalPaidAt=order.paid_at?new Date(order.paid_at):now;
+const accessEnd=new Date(originalPaidAt);accessEnd.setUTCMonth(accessEnd.getUTCMonth()+6);
+const {error:e2}=await db.from("client_workspaces").update({status:"active",activated_at:originalPaidAt.toISOString(),access_expires_at:accessEnd.toISOString()}).eq("id",order.workspace_id).eq("status","pending_payment");
 if(e2)return reply(503);
 return reply(200);
 });
