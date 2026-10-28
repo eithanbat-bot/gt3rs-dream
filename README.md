@@ -31,3 +31,18 @@ Revenue and contacted prospects remain **zero** until confirmed by verifiable ev
 
 ## Deployment
 GitHub repository is the Vercel production source. The app is a static HTML/CSS/JavaScript site in the repository root and uses no paid build tooling.
+
+## Sellable LeadLift Inbox product (28 October 2026)
+
+- **Public product:** https://leadlift-gt3rs.vercel.app/inbox.html
+- **Interactive buyer demo:** https://leadlift-gt3rs.vercel.app/portal.html?demo=1
+- **Customer portal:** https://leadlift-gt3rs.vercel.app/portal.html
+- **Customer guide:** https://leadlift-gt3rs.vercel.app/customer-guide.html
+- **Embeddable script:** https://leadlift-gt3rs.vercel.app/widget.js
+- **Backend:** Supabase GT3 RS project; `client_workspaces`, `client_leads`, `client_orders`, `client_widget_attempts`, `client_support_tickets`, with tenant RLS and no anonymous direct reads.
+- **Functions:** `create-workspace`, `client-enquiry`, `checkout-paystack` and `paystack-webhook`. Checkout and activation require a Paystack `sk_live_` secret configured securely in the runtime, signed webhook verification and an actual paid order. No merchant has been configured yet and no paid activation has been tested.
+- **Product:** R4,900 for six months hosted access, one owner, one authorized HTTPS domain, up to 250 enquiries/rolling 30 days; renewal quoted separately. No message-sending or calendar automation included.
+- **Social + Google Ads assets:** `marketing/social-launch-copy.md` and `marketing/google-ads-search-draft.md`. DRAFT / not published or funded. Publishing requires authorized brand accounts, advertiser verification and approved budget.
+- **Production code:** published to Vercel by source-file deployment. GitHub-to-Vercel automatic linking is not yet enabled because the Vercel GitHub integration is absent.
+- **Handover and commercial dependencies:** `sales/product-handover-checklist.md`. Seller legal identity and full terms must be completed before payment collection. Legal and platform identification cannot be misrepresented to conceal the seller.
+- **Verification:** production routes returned HTTP 200; backend rejected anonymous workspace creation 401, disabled checkout 503, invalid widget 404; static module script syntax checked and widget parser passed. Full genuine customer payment/webhook, interactive browser UI and multi-tenant access tests with real accounts are not yet verified. Do not state that there are paying customers unless the database and payment provider confirm it.
