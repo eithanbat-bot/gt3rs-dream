@@ -20,7 +20,11 @@ if(!/^LL[a-f0-9]{32}$/.test(ref))return reply(200);
 const db=createClient(Deno.env.get("SUPABASE_URL")!,Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,{auth:{persistSession:false}});
 const {data:order}=await db.from("client_orders").select("*").eq("gateway_reference",ref).maybeSingle();
 if(!order)return reply(200);
-if(order.status==="paid"){\n const {data:ws}=await db.from("client_workspaces").select("status").eq("id",order.workspace_id).maybeSingle();\n if(ws?.status==="active")return reply(200);\n // Recover if a prior attempt recorded the payment but could not activate access.\n}
+if(order.status==="paid"){
+ const {data:ws}=await db.from("client_workspaces").select("status").eq("id",order.workspace_id).maybeSingle();
+ if(ws?.status==="active")return reply(200);
+ // Recover if a prior attempt recorded the payment but could not activate access.
+}
 if(order.status!=="pending"&&order.status!=="paid")return reply(409);
 if(Number(evt.data.amount)!==order.amount_subunits||evt.data.currency!=="ZAR")return reply(400);
 // Re-query Paystack so a forged callback or redirect can never activate a workspace.
