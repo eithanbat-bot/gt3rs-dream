@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://leadlift-gt3rs.vercel.app/sitemap.xml
