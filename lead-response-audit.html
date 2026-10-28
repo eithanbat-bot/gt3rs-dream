@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Free lead response audit for South African service businesses. Check enquiry ownership, qualification, response targets and follow-up without uploading customer data.">
+<meta property="og:title" content="Lead response audit checklist | LeadLift">
+<meta property="og:description" content="Six practical checks to find gaps between new enquiries and human follow-up. No signup or data upload required.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://leadlift-gt3rs.vercel.app/lead-response-audit.html">
+<title>Free lead response audit for service businesses | LeadLift</title>
+<style>
+:root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#14313e;background:#f6f7f1;line-height:1.65}*{box-sizing:border-box}body{margin:0}a{color:#086e5b}a:focus-visible,button:focus-visible,select:focus-visible{outline:3px solid #178b75;outline-offset:3px}
+header{background:#081b28;padding:20px max(20px,calc((100vw - 940px)/2))}header a{color:#9df0d5;text-decoration:none;font-weight:850;font-size:21px}
+main{max-width:940px;margin:auto;padding:56px 22px 82px}h1{font-size:clamp(36px,5.5vw,56px);line-height:1.12;letter-spacing:-.055em;margin:13px 0 22px}h2{line-height:1.22;letter-spacing:-.03em;margin-top:40px}.eyebrow{color:#107a63;font-size:12px;text-transform:uppercase;font-weight:850;letter-spacing:.13em}.intro{max-width:760px;color:#506b70;font-size:17px}.panel{background:#fff;border:1px solid #d5e5df;border-radius:16px;padding:30px;margin-top:30px;box-shadow:0 10px 38px #18344210}
+fieldset{border:0;padding:0;margin:0}legend{font-weight:850;font-size:21px;margin-bottom:16px}.row{padding:17px 0;border-bottom:1px solid #e5ece8;display:grid;grid-template-columns:1fr minmax(170px,220px);gap:24px;align-items:center}.row:last-of-type{border-bottom:0}.row label{font-weight:730;display:block}.hint{display:block;font-size:13px;color:#5d7276;font-weight:400;margin-top:4px}
+select{width:100%;padding:12px;border:1px solid #aabfb8;border-radius:8px;background:#fff;color:#14313e;font:inherit}button,.cta{display:inline-block;border:0;background:#0b705d;color:#fff;border-radius:9px;padding:14px 20px;font:inherit;font-weight:800;cursor:pointer;text-decoration:none}button:hover,.cta:hover{background:#085746}.actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:25px}.quiet{font-size:13px;color:#65787c}.result{display:none;background:#eaf7f1;border-left:5px solid #16836c;padding:24px;margin-top:28px;border-radius:7px}.result.visible{display:block}.result strong{font-size:22px}.result ul{padding-left:20px}.result li{margin:10px 0}.note{background:#e8f2f0;border-radius:12px;padding:19px 24px;margin-top:30px}p,li{color:#435d64}footer{background:#081b28;padding:27px 20px;text-align:center;color:#bdd9d3}footer a{color:#a1f0d6}
+@media(max-width:640px){main{padding-top:39px}.panel{padding:22px 17px}.row{grid-template-columns:1fr;gap:10px}h1{font-size:38px}}
+</style>
+</head>
+<body>
+<header><a href="/">↗ LeadLift.</a></header>
+<main>
+<p class="eyebrow">Free operational self-check · South Africa</p>
+<h1>Lead response audit: where do enquiries get stuck?</h1>
+<p class="intro">A practical six-point checklist for solar installers, property service teams and other high-value service businesses. Identify process gaps before paying for automation. This tool runs entirely in your browser: no account, email address or customer data is required.</p>
+<section class="panel" aria-labelledby="check-title">
+<h2 id="check-title" style="margin-top:0">Check your current process</h2>
+<form id="audit">
+<fieldset>
+<legend>For each statement, choose the closest answer.</legend>
+<div class="row"><label for="q1">1. We record every new enquiry in one place.<span class="hint">Include phone, website, email and messaging channels where relevant.</span></label><select id="q1" required><option value="">Choose an answer</option><option value="2">Consistently</option><option value="1">Sometimes</option><option value="0">Not yet</option></select></div>
+<div class="row"><label for="q2">2. Every enquiry has a named owner.<span class="hint">A person is accountable for the next action, even if software assists.</span></label><select id="q2" required><option value="">Choose an answer</option><option value="2">Consistently</option><option value="1">Sometimes</option><option value="0">Not yet</option></select></div>
+<div class="row"><label for="q3">3. We have a realistic first-response target.<span class="hint">The target fits opening hours, staffing and urgency.</span></label><select id="q3" required><option value="">Choose an answer</option><option value="2">Consistently</option><option value="1">Sometimes</option><option value="0">Not yet</option></select></div>
+<div class="row"><label for="q4">4. We collect the details needed for a useful next step.<span class="hint">For example, service area, scope, timeframe and contact preference.</span></label><select id="q4" required><option value="">Choose an answer</option><option value="2">Consistently</option><option value="1">Sometimes</option><option value="0">Not yet</option></select></div>
+<div class="row"><label for="q5">5. Unanswered or urgent requests are escalated.<span class="hint">The team knows what to do when the owner is unavailable.</span></label><select id="q5" required><option value="">Choose an answer</option><option value="2">Consistently</option><option value="1">Sometimes</option><option value="0">Not yet</option></select></div>
+<div class="row"><label for="q6">6. We track follow-up outcomes and respect opt-outs.<span class="hint">A follow-up is logged; a refusal stops marketing contact.</span></label><select id="q6" required><option value="">Choose an answer</option><option value="2">Consistently</option><option value="1">Sometimes</option><option value="0">Not yet</option></select></div>
+</fieldset>
+<div class="actions"><button type="submit">Show my process gaps ↗</button><span class="quiet">No data is sent or stored by this tool.</span></div>
+</form>
+<div class="result" id="result" role="status" aria-live="polite" aria-atomic="true">
+<strong id="score"></strong>
+<p id="interpretation"></p>
+<h3>Suggested first actions</h3>
+<ul id="recommendations"></ul>
+<p class="quiet">This is a descriptive self-check, not a validated benchmark, financial forecast or guarantee of more sales. Verify improvements with your own baseline data.</p>
+</div>
+</section>
+<section aria-labelledby="measure"><h2 id="measure">What to measure after making a change</h2><p>Start with four operational measures: the share of enquiries assigned an owner, median time to first meaningful human response, share with a documented next action, and the number of opt-outs respected. Compare equivalent time periods and review whether the team can sustain the process before introducing more automation.</p>
+<div class="note"><strong>Related field guides:</strong> <a href="/solar-enquiry-checklist.html">Solar enquiry follow-up</a> · <a href="/property-maintenance-enquiry-checklist.html">Property maintenance triage</a>. These are educational resources, not claims that LeadLift is connected to your systems.</div>
+<h2>Need help implementing the handoff?</h2><p>LeadLift can map the current enquiry process, design qualification rules and scope a human-reviewed workflow. Integrations require authorization and testing. There are no guaranteed appointments, revenue results or preconnected messaging accounts.</p><a class="cta" href="/#contact">Request an implementation demo ↗</a>
+<p class="quiet">General operational guidance, not legal or professional advice. Published 28 October 2026.</p>
+</section>
+</main>
+<footer><a href="/">LeadLift home</a> · <a href="/privacy.html">Privacy notice</a></footer>
+<script>
+(function(){
+  "use strict";
+  const actions=[
+    "Create a single intake register for all agreed enquiry channels, with date, source and next action.",
+    "Assign a named owner to each new enquiry and make reassignment visible when someone is away.",
+    "Set a staffed-hours response target and an explicit exception for urgent requests.",
+    "Define a short qualification checklist for location, scope, timeframe and preferred response channel.",
+    "Document escalation rules for urgent, unowned and overdue enquiries; retain human review for safety-sensitive issues.",
+    "Log follow-up status and outcomes, and immediately respect refusals and marketing opt-outs."
+  ];
+  const form=document.getElementById("audit"), result=document.getElementById("result");
+  form.addEventListener("submit",function(event){
+    event.preventDefault();
+    if(!form.reportValidity())return;
+    const values=actions.map((_,i)=>Number(document.getElementById("q"+(i+1)).value));
+    const score=values.reduce((a,b)=>a+b,0);
+    document.getElementById("score").textContent=score+" of 12 checklist points in place";
+    document.getElementById("interpretation").textContent=score>=10?
+      "Most basics appear covered. Verify consistency with a small sample of real enquiries before investing in more tools.":
+      score>=6?"Several safeguards are inconsistent. Fix ownership and follow-up visibility before adding complexity.":
+      "Your answers suggest important process gaps. Start with intake visibility and a clear owner for each enquiry.";
+    const ul=document.getElementById("recommendations");ul.replaceChildren();
+    const gaps=values.map((v,i)=>({v,i})).filter(x=>x.v<2).sort((a,b)=>a.v-b.v||a.i-b.i).slice(0,3);
+    const selected=gaps.length?gaps:[{i:0},{i:1},{i:5}];
+    selected.forEach(x=>{const li=document.createElement("li");li.textContent=actions[x.i];ul.appendChild(li);});
+    result.classList.add("visible");result.scrollIntoView({behavior:"smooth",block:"nearest"});
+  });
+})();
+</script>
+</body>
+</html>
