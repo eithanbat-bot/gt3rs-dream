@@ -7,7 +7,7 @@ if(req.method==="OPTIONS")return new Response(null,{status:204,headers});
 if(req.method!=="POST")return reply({error:"Method not allowed"},405);
 if(req.headers.get("origin")!==ORIGIN)return reply({error:"Origin not allowed"},403);
 const secret=Deno.env.get("PAYSTACK_SECRET_KEY");
-if(!secret)return reply({error:"Checkout is not open yet. Request a demo while merchant verification is completed."},503);
+if(!secret?.startsWith("sk_live_"))return reply({error:"Checkout is not open yet. Request a demo while merchant verification is completed."},503);
 const jwt=req.headers.get("authorization")?.replace(/^Bearer\s+/i,"");
 if(!jwt)return reply({error:"Sign in first"},401);
 const db=createClient(Deno.env.get("SUPABASE_URL")!,Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,{auth:{persistSession:false}});
