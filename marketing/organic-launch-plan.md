@@ -15,3 +15,9 @@ KPI definitions:
 - Inbound demo requests: successful backend insert and real consent timestamp.
 - Proposals sent: real, permissioned proposals.
 - Won: agreement signed and payment confirmed.
+
+## 28 October 2026 — organic self-audit asset
+- Added a six-point lead response self-audit that runs locally in the visitor browser and does not request or transmit contact details.
+- Linked the self-audit from the homepage educational resources and included its canonical URL in the XML sitemap.
+- The scoring is descriptive, not a validated performance benchmark or sales forecast; no testimonials, customers or results are fabricated.
+- Measurement plan: compare unique visits to the self-audit, demo form submissions, genuine opted-in enquiries, completed discovery calls and paid agreements using verified records only. Do not infer attribution without consent-respecting measurement.
