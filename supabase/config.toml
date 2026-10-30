@@ -5,3 +5,7 @@ verify_jwt = false
 
 [functions.register-leadlift-user]
 verify_jwt = false
+
+[auth]
+site_url = "https://leadlift-gt3rs.vercel.app"
+additional_redirect_urls = ["https://leadlift-gt3rs.vercel.app/assistant.html"]
