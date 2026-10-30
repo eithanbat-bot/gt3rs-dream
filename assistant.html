@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0a2633"><meta name="description" content="LeadLift Mail — a private B2B inbox copilot for Gmail and Microsoft 365. Prioritise purchase intent, learn writing style, and manage human approvals.">
+<title>LeadLift Mail | AI Inbox Assistant</title>
+<style>
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;color:#193943;background:#f3f7f5;font-synthesis:none}*{box-sizing:border-box}body{margin:0}button,input,textarea{font:inherit}button{cursor:pointer}a{color:inherit}.shell{display:flex;min-height:100vh}.side{background:#092a35;color:#f1fbf7;width:235px;flex:0 0 235px;padding:25px 18px;display:flex;flex-direction:column;gap:28px}.brand{font-size:22px;font-weight:850;letter-spacing:-.05em;text-decoration:none}.brand span{color:#6be5bb}.smallcaps{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#77b1ad;font-weight:800;margin:0 13px 10px}.nav{display:grid;gap:5px}.nav button,.nav a{display:flex;gap:10px;align-items:center;text-decoration:none;text-align:left;border:0;background:transparent;color:#c2dcda;padding:11px 14px;border-radius:10px;font-size:13px;font-weight:700}.nav button.active,.nav button:hover,.nav a:hover{background:#174751;color:white}.sidefooter{margin-top:auto;color:#a2c0bc;font-size:12px;line-height:1.65;padding:8px 12px;border-top:1px solid #2b555a}.main{flex:1;min-width:0}.head{background:white;min-height:80px;display:flex;align-items:center;justify-content:space-between;gap:15px;padding:16px 33px;border-bottom:1px solid #e0e9e5}.head h1{font-size:24px;letter-spacing:-.05em;margin:0}.head p{margin:3px 0 0;font-size:12px;color:#71908d}.headR{display:flex;align-items:center;gap:10px}.tag{border-radius:99px;background:#e8f8ef;color:#0b8162;padding:6px 10px;font-weight:800;font-size:11px;white-space:nowrap}.tag.amber{background:#fff3da;color:#9b6406}.tag.gray{background:#edf1f1;color:#687877}.btn{border:0;background:#0d7965;color:white;padding:11px 16px;border-radius:9px;font-size:13px;font-weight:750;transition:.15s}.btn:hover{filter:brightness(.92)}.btn:disabled{opacity:.45;cursor:not-allowed}.btn.secondary{background:#e7f1ee;color:#1a6859}.btn.ghost{background:white;border:1px solid #d5e4df;color:#2b615a}.btn.danger{background:#fff0f0;color:#a32828}.body{max-width:1470px;margin:auto;padding:26px 32px}.banner{background:#e9f8f3;color:#245e52;border:1px solid #ceeadf;border-radius:12px;padding:12px 17px;font-size:12px;line-height:1.6;margin-bottom:20px}.banner strong{color:#096f58}.stats{display:grid;grid-template-columns:repeat(4,minmax(130px,1fr));gap:15px;margin-bottom:23px}.stat{background:white;border:1px solid #e0eae5;border-radius:13px;padding:18px 20px}.stat small{display:block;font-size:11px;font-weight:700;color:#78908c}.stat strong{font-size:30px;letter-spacing:-.06em;display:block;margin-top:6px}.stat em{font-size:11px;color:#728a85;font-style:normal}.work{display:grid;grid-template-columns:minmax(320px,1fr) minmax(360px,1.1fr);gap:18px;align-items:start}.panel{background:white;border:1px solid #dde9e3;border-radius:13px;overflow:hidden;min-width:0}.panelhead{padding:17px 19px;border-bottom:1px solid #e6eeeb;display:flex;align-items:center;justify-content:space-between;gap:9px}.panelhead strong{font-size:14px}.panelfoot{border-top:1px solid #e6eeeb;padding:13px 18px;color:#77928b;font-size:11px}.controls{display:flex;gap:6px;flex-wrap:wrap}.chip{border:1px solid #dce8e3;background:#fff;border-radius:8px;padding:7px 11px;color:#64827a;font-size:11px;font-weight:800}.chip.active{background:#0f6958;color:white;border-color:#0f6958}.message{width:100%;border:0;border-bottom:1px solid #eef2f0;background:white;text-align:left;display:grid;grid-template-columns:44px 1fr 46px;gap:12px;align-items:start;padding:17px 18px;color:#20414a}.message:hover,.message.selected{background:#f0faf5}.avatar{height:39px;width:39px;border-radius:12px;background:#dbeee4;color:#16695b;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:850}.msgsub{font-weight:780;font-size:13px;line-height:1.45}.msgmeta{font-size:11px;color:#7b938e;margin-top:2px}.preview{font-size:11px;color:#6d8882;line-height:1.55;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:350px;margin-top:6px}.score{text-align:center;border-radius:9px;background:#e9f8ee;color:#18815e;padding:7px 2px;font-size:16px;font-weight:850}.score.high{background:#d6f5e4;color:#006f48}.score.low{background:#f1f3f2;color:#778984}.score span{display:block;text-transform:uppercase;letter-spacing:.04em;font-size:8px}.detail{padding:21px 23px}.detail h2{font-size:21px;letter-spacing:-.04em;margin:5px 0 9px}.detail .meta{font-size:12px;color:#728b85}.divider{height:1px;background:#e9efec;margin:19px 0}.detail p{font-size:13px;line-height:1.72}.label{font-size:10px;font-weight:800;color:#76928c;text-transform:uppercase;letter-spacing:.1em}.pill{display:inline-block;background:#e8f3ef;color:#1b7b65;border-radius:6px;padding:5px 8px;margin:5px 5px 0 0;font-size:10px;font-weight:750}.pill.warn{background:#fff1dc;color:#8b5d14}.mailbody{white-space:pre-wrap;overflow-wrap:anywhere;max-height:210px;overflow:auto;background:#f8faf9;border:1px solid #edf1ee;padding:13px 15px;border-radius:9px;margin-top:10px;font-size:12px;line-height:1.55}.detail textarea{width:100%;min-height:145px;border-radius:10px;border:1px solid #cedfd7;padding:13px;color:#21454a;resize:vertical;line-height:1.6;font-size:12px;margin-top:10px}.actionRow{display:flex;gap:9px;flex-wrap:wrap;margin-top:10px}.empty{text-align:center;padding:45px 20px;color:#77948d;font-size:13px}.sectionPanel{padding:23px;margin-bottom:20px}.sectionPanel h2{font-size:19px;margin:0 0 8px;letter-spacing:-.04em}.sectionPanel p{color:#708984;font-size:13px;line-height:1.6;margin:0 0 15px}.providers{display:grid;grid-template-columns:repeat(2,minmax(220px,1fr));gap:13px}.provider{border:1px solid #dce8e2;border-radius:11px;padding:18px;display:flex;flex-direction:column;gap:12px}.provider strong{font-size:16px}.provider p{margin:0}.providerhead{display:flex;align-items:center;justify-content:space-between;gap:9px}.account{display:flex;align-items:center;justify-content:space-between;gap:15px;border:1px solid #e4ece7;border-radius:10px;padding:15px;margin-top:12px}.account strong{font-size:13px}.account small{color:#7b958d;font-size:11px}.account-actions{display:flex;gap:7px;flex-wrap:wrap}.progress{height:7px;background:#e5f0ec;border-radius:9px;overflow:hidden;margin:8px 0}.progress div{background:#2ab48b;height:100%;transition:.2s}.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}.callout{border:1px solid #f3ddba;background:#fff8ec;padding:14px;border-radius:10px;color:#835d1c;font-size:12px;line-height:1.6}.loginWrap{min-height:68vh;display:grid;place-items:center}.login{width:min(100%,440px);background:white;border:1px solid #e0eae4;padding:31px;border-radius:16px;box-shadow:0 18px 50px #10392a10}.login h2{letter-spacing:-.04em;font-size:27px;margin:0 0 7px}.login p{color:#708982;font-size:13px;line-height:1.6}.login input{width:100%;border:1px solid #d6e5dd;border-radius:8px;padding:12px;margin:7px 0;color:#173a36}.login .btn{width:100%;margin-top:10px}.login .links{display:flex;justify-content:space-between;gap:10px;margin-top:13px}.login .links button{color:#15846a;border:0;background:none;font-size:12px;font-weight:750}.notice{font-size:12px;line-height:1.65;background:#f5faf7;padding:13px;border-radius:10px;color:#618276}.notice.error{background:#fff1ed;color:#a03928}.toggle{display:flex;gap:10px;align-items:center;font-size:13px}.toggle input{width:17px;height:17px}.hidden{display:none!important}@media(max-width:1050px){.side{width:194px;flex-basis:194px}.work{grid-template-columns:1fr}.message{grid-template-columns:44px 1fr 50px}}@media(max-width:700px){.shell{display:block}.side{width:100%;min-height:auto;padding:13px 14px;display:block}.side .brand{display:block}.smallcaps,.sidefooter{display:none}.side .nav{display:flex;overflow-x:auto;margin-top:10px}.side .nav button,.side .nav a{white-space:nowrap;font-size:11px;padding:9px}.head{padding:14px 16px}.head h1{font-size:19px}.headR{flex-wrap:wrap;justify-content:end}.headR .btn{padding:8px}.body{padding:17px 13px}.stats{grid-template-columns:repeat(2,1fr)}.stat{padding:13px}.providers,.two{grid-template-columns:1fr}.account{display:block}.account-actions{margin-top:10px}.detail{padding:16px}}
+</style></head>
+<body><div class="shell">
+<aside class="side"><a class="brand" href="/">↗ LeadLift <span>Mail</span></a><div><div class="smallcaps">Workspace</div><nav class="nav">
+<button data-page="inbox" class="active">✉ &nbsp; Priority inbox</button><button data-page="handoff">⚑ &nbsp; Human handoffs</button><button data-page="voice">◉ &nbsp; Writing style</button><button data-page="settings">⚙ &nbsp; Connections</button><a href="/">⌂ &nbsp; LeadLift website</a></nav></div><div class="sidefooter"><b>LeadLift Mail · Early access</b><br>Made for B2B inbox teams.<br>Private by default. You stay in control.</div></aside>
+<div class="main"><header class="head"><div><h1 id="pageTitle">Priority inbox</h1><p id="subtitle">Turn messages into actionable conversations.</p></div><div class="headR"><span class="tag" id="modeTag">Demo mode</span><button class="btn ghost" id="demoSwitch">Use demo</button><button class="btn" id="syncBtn" style="display:none">↻ Sync inbox</button><button class="btn secondary" id="logoutBtn" style="display:none">Sign out</button></div></header>
+<main class="body" id="content"></main></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.58.0/dist/umd/supabase.min.js"></script>
+<script>
+(function(){
+"use strict";
+const API="https://rqbvdgzjpepgobablqhv.supabase.co/functions/v1/mail-assistant";
+const SB_URL="https://rqbvdgzjpepgobablqhv.supabase.co";
+const PUBLIC_KEY="sb_publishable_EOvbQ90Q0Vv-_1kuOVXWEQ_W7zjmT34";
+const sdk=window.supabase?window.supabase.createClient(SB_URL,PUBLIC_KEY):null;
+const examples=[
+{id:"d1",account_id:"demo",sender_email:"purchasing@northstar.example",subject:"Ready to proceed — 25 licences",body_text:"Hi, we've reviewed the proposal and would like to go ahead with 25 licences. Could you confirm the final price and how soon we can get started this week?",received_at:"2026-10-30T07:40:00Z",intent_score:98,category:"sales",score_reasons:["Direct purchase signal","Time-sensitive request","Commercial detail requested"],requires_human:true,brief:"A customer is ready to proceed with 25 licences and needs final pricing and start date. Verify pricing, capacity and terms before committing.",status:"new",draft_reply:null},
+{id:"d2",account_id:"demo",sender_email:"operations@fieldstone.example",subject:"Quote request for team software",body_text:"Hello, we are looking for a solution for our sales team. Can you share a quote for 10 users and the onboarding process? We'd like to decide this week.",received_at:"2026-10-30T06:08:00Z",intent_score:87,category:"quote",score_reasons:["Pricing or quote request","Expressed interest","Time-sensitive request"],requires_human:false,brief:"",status:"new",draft_reply:null},
+{id:"d3",account_id:"demo",sender_email:"hello@cedarworks.example",subject:"Can we book a product demo?",body_text:"Good morning. Is there availability to book a demo for Tuesday afternoon? We need to see the reporting features before making a decision.",received_at:"2026-10-29T14:30:00Z",intent_score:79,category:"booking",score_reasons:["Scheduling or booking intent","Expressed interest"],requires_human:true,brief:"Demo requested for Tuesday afternoon. Confirm the actual date, timezone, attendee details and calendar availability before responding.",status:"review",draft_reply:null},
+{id:"d4",account_id:"demo",sender_email:"support@client.example",subject:"Question about our invoice",body_text:"Thanks for the update. Could you check why the renewal amount is different this month? We'd appreciate some clarification.",received_at:"2026-10-29T12:40:00Z",intent_score:24,category:"service",score_reasons:["Commercial detail requested"],requires_human:true,brief:"Billing discrepancy: review the invoice and verified account record. Do not guess the amount.",status:"new",draft_reply:null},
+{id:"d5",account_id:"demo",sender_email:"newsletter@industry.example",subject:"Weekly industry round-up",body_text:"Here's your weekly digest. See the latest trends, reports and promotions. Click to unsubscribe.",received_at:"2026-10-29T09:30:00Z",intent_score:2,category:"information",score_reasons:["Likely newsletter or promotion"],requires_human:false,brief:"",status:"new",draft_reply:null}
+];
+let state={demo:new URLSearchParams(location.search).get("demo")==="1",session:null,page:"inbox",filter:"all",selected:null,data:{accounts:[],messages:[],profiles:[],readiness:{}},busy:false,training:false,note:""};
+const q=s=>document.querySelector(s);
+const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const formatDate=d=>{const t=new Date(d);return isNaN(t.getTime())?"":t.toLocaleDateString(undefined,{month:"short",day:"numeric"})};
+function showNote(s,isError){state.note=s;const n=q("#globalNote");if(n){n.textContent=s;n.className="notice"+(isError?" error":"");n.classList.remove("hidden")}}
+function fakeData(){return {accounts:[],messages:examples,profiles:[{sample_count:500,avg_words:64,formality_score:.66,greeting_counts:{"Hello":125,"Hi":265,"Good morning":110},signoff_counts:{"Kind regards":200,"Thanks":175,"Best regards":125}}],readiness:{google:false,microsoft:false,ai:false}}}
+function isDemo(){return state.demo}
+async function api(body){
+ const s=(await sdk.auth.getSession()).data.session;
+ if(!s)throw Error("Please sign in");
+ const r=await fetch(API,{method:"POST",headers:{"Content-Type":"application/json","apikey":PUBLIC_KEY,"Authorization":"Bearer "+s.access_token},body:JSON.stringify(body)});
+ const j=await r.json().catch(()=>({error:"Invalid server response"}));
+ if(!r.ok)throw Error(j.error||"Request failed");return j;
+}
+async function load(){if(isDemo()){state.data=fakeData();render();return}if(!state.session){render();return}
+ try{const d=await api({action:"status"});state.data=d;state.note="";render()}catch(e){state.note=e.message;render()}}
+function switchPage(page){state.page=page;state.selected=null;render()}
+function selectedRows(){let list=state.data.messages||[];if(state.page==="handoff")list=list.filter(x=>x.requires_human);if(state.filter==="priority")list=list.filter(x=>x.intent_score>=70);if(state.filter==="review")list=list.filter(x=>x.requires_human||x.status==="review");if(state.filter==="new")list=list.filter(x=>x.status==="new");return list}
+function badgeScore(n){return '<span class="score '+(n>=70?"high":n<30?"low":"")+'">'+n+'<span>/ 100</span></span>'}
+function stats(){const msgs=state.data.messages||[];const priority=msgs.filter(x=>x.intent_score>=70);return '<div class="stats">'+[
+["Total messages",msgs.length,"Last synced messages"],
+["Priority (70+)",priority.length,"High purchase intent"],
+["Needs your decision",msgs.filter(x=>x.requires_human).length,"Approvals & handoffs"],
+["Drafts ready",msgs.filter(x=>["review","drafted"].includes(x.status)).length,"Pending your review"]
+].map(x=>'<div class="stat"><small>'+x[0]+'</small><strong>'+x[1]+'</strong><em>'+x[2]+'</em></div>').join("")+'</div>'}
+function inbox(){
+ const list=selectedRows();
+ if(!state.selected&&list.length)state.selected=list[0].id;
+ const selected=list.find(x=>x.id===state.selected);
+ const filters=[["all","All"],["priority","Priority 70+"],["review","Needs review"],["new","New"]];
+ return stats()+'<div class="work"><div class="panel"><div class="panelhead"><strong>Messages · '+list.length+'</strong><div class="controls">'+filters.map(x=>'<button class="chip '+(state.filter===x[0]?"active":"")+'" data-filter="'+x[0]+'">'+x[1]+'</button>').join("")+'</div></div>'+
+ (list.length?list.map(m=>'<button class="message '+(m.id===state.selected?"selected":"")+'" data-message="'+esc(m.id)+'"><span class="avatar">'+esc((m.sender_email||"?")[0].toUpperCase())+'</span><span><span class="msgsub">'+esc(m.subject)+'</span><span class="msgmeta">'+esc(m.sender_email)+' · '+formatDate(m.received_at)+'</span><span class="preview">'+esc(m.body_text)+'</span></span>'+badgeScore(m.intent_score)+'</button>').join(""):'<div class="empty">No messages in this view.<br>Connect a mailbox and sync to start.</div>')+
+ '<div class="panelfoot">Scoring ranks purchase intent from 0–100. It is not a statistically calibrated purchase probability.</div></div><div class="panel">'+(selected?detail(selected):'<div class="empty">Select an email to inspect its score and suggested reply.</div>')+'</div></div>';
+}
+function detail(m){
+ return '<div class="detail"><div class="label">Email detail · '+esc(m.category)+'</div><h2>'+esc(m.subject)+'</h2><div class="meta">From '+esc(m.sender_email)+' · '+formatDate(m.received_at)+' · '+esc(m.status)+'</div>'+
+ '<div class="divider"></div><div class="label">Purchase-intent score</div><div style="display:flex;align-items:center;gap:13px;margin:8px 0 3px">'+badgeScore(m.intent_score)+'<span style="font-size:12px;color:#708b84">Rule-based ranking. Review before acting.</span></div>'+
+ (m.score_reasons||[]).map(x=>'<span class="pill">'+esc(x)+'</span>').join("")+
+ (m.requires_human?'<div class="callout" style="margin-top:15px"><strong>Human decision required.</strong> '+esc(m.brief||"Review this email and related facts before any commitment.")+'</div>':"")+
+ '<div class="divider"></div><div class="label">Original message</div><div class="mailbody">'+esc(m.body_text||"No text content")+'</div><div class="divider"></div>'+
+ '<div class="label">Proposed reply · '+(m.requires_human?"approval needed":"review before send")+'</div><textarea id="draftText" placeholder="Generate or write a reply…">'+esc(m.draft_reply||"")+'</textarea>'+
+ '<div class="actionRow"><button class="btn secondary" data-act="draft">✦ Generate draft</button><button class="btn ghost" data-act="save">Save changes</button><button class="btn" data-act="send" '+(isDemo()?"disabled":"")+'>Send approved reply</button><button class="btn danger" data-act="dismiss">Dismiss</button></div>'+
+ '<p style="font-size:11px;color:#84968f;margin-top:12px">'+(isDemo()?"Demo only: no email is sent.":"Sending requires a deliberate confirmation. No automatic messages are currently enabled.")+'</p></div>';
+}
+function connectionPage(){
+ const a=state.data.accounts||[],r=state.data.readiness||{};
+ return '<div class="panel sectionPanel"><h2>Connect an inbox</h2><p>Use your own OAuth consent. LeadLift never asks you to paste a mailbox password. Each user only sees their own account.</p><div class="providers">'+[
+ ["google","Gmail / Google Workspace","Reads inbox and sent items after consent. Uses Gmail API."],
+ ["microsoft","Outlook / Microsoft 365","Uses delegated Microsoft Graph permissions."]
+ ].map(x=>'<div class="provider"><div class="providerhead"><strong>'+x[1]+'</strong><span class="tag '+(r[x[0]]?"":"amber")+'">'+(r[x[0]]?"Configured":"Setup needed")+'</span></div><p>'+x[2]+'</p><button class="btn" data-connect="'+x[0]+'" '+(!r[x[0]]||isDemo()?"disabled":"")+'>'+(!r[x[0]]?"OAuth credentials needed":"Connect securely")+'</button></div>').join("")+'</div>'+
+ '<div class="callout" style="margin-top:15px"><b>Before live use:</b> configure Google OAuth and Microsoft Entra apps, register the exact authorized redirect URL, and obtain the mailbox owner\'s consent. Gmail restricted-scope verification may be required. Never import a client\'s email without their authorization.</div></div>'+
+ '<div class="panel sectionPanel"><h2>Connected accounts</h2><p>Your mailbox connections, controls and the time of their last sync.</p>'+
+ (a.length?a.map(x=>'<div class="account"><div><strong>'+esc(x.email_address)+'</strong><br><small>'+esc(x.provider)+' · '+(x.last_sync_at?"Last synced "+formatDate(x.last_sync_at):"Not synced")+' · '+esc(x.send_mode)+'</small></div><div class="account-actions"><button class="btn secondary" data-use-account="'+esc(x.id)+'">Sync</button><button class="btn ghost" data-pause="'+esc(x.id)+'">'+(x.send_mode==="paused"?"Resume":"Pause")+'</button><button class="btn danger" data-disconnect="'+esc(x.id)+'">Disconnect & delete</button></div></div>').join(""):'<div class="empty">No mailbox has been connected yet.</div>')+
+ '</div><div class="panel sectionPanel"><h2>How sending works</h2><p>The current release is approval-first. LeadLift creates editable drafts and identifies human-only actions. It does not autonomously commit pricing, appointments, healthcare advice, policy decisions or send messages without explicit review.</p></div>';
+}
+function voicePage(){
+ const a=state.data.accounts||[],profiles=state.data.profiles||[];
+ return '<div class="panel sectionPanel"><h2>Learn how you write</h2><p>On your instruction, LeadLift scans up to <strong>500 previously sent emails</strong> from your connected account. It builds an aggregated style profile — greeting, sign-off, average length, formality and punctuation — without retaining the 500 training email bodies in its style database.</p>'+
+ (isDemo()?'<div class="callout">Demo profile illustrates the interface. It is not learned from any real user.</div>':"")+
+ (a.length?a.map(x=>{const p=profiles.find(y=>y.account_id===x.id)||{};return '<div class="account" style="display:block"><div class="providerhead"><strong>'+esc(x.email_address)+'</strong><span class="tag">'+Number(x.voice_sample_count||0)+' / 500</span></div><div class="progress"><div style="width:'+Math.min(100,Number(x.voice_sample_count||0)/5)+'%"></div></div><p style="font-size:12px;margin:8px 0">Typical greeting: <b>'+esc(Object.entries(p.greeting_counts||{}).sort((a,b)=>b[1]-a[1])[0]?.[0]||"Not learned")+'</b> · Closing: <b>'+esc(Object.entries(p.signoff_counts||{}).sort((a,b)=>b[1]-a[1])[0]?.[0]||"Not learned")+'</b> · Average length: <b>'+Math.round(p.avg_words||0)+' words</b></p><button class="btn secondary" data-train="'+esc(x.id)+'" '+(state.training?"disabled":"")+'>Train from sent email</button></div>'}).join(""):'<div class="empty">Connect Gmail or Outlook first to learn your writing style.</div>')+
+ '</div><div class="panel sectionPanel"><h2>AI drafting and privacy</h2><p>Personalized AI-generated drafts require a separately configured AI provider and your consent to process message content. Without that, LeadLift uses transparent reply templates shaped by your aggregated style statistics.</p>'+
+ (a.length?a.map(x=>'<label class="toggle" style="margin:13px 0"><input type="checkbox" data-consent="'+esc(x.id)+'" '+(x.ai_processing_consent?"checked":"")+' '+(isDemo()?"disabled":"")+'> Allow AI processing of emails from '+esc(x.email_address)+'</label>').join(""):"")+
+ '<div class="callout">For regulated or sensitive email, obtain a lawful processing basis and review service-provider agreements and applicable privacy requirements before enabling external AI processing.</div></div>';
+}
+function loginPage(){
+ return '<div class="loginWrap"><div class="login"><div class="tag" style="width:max-content;margin-bottom:14px">Private workspace</div><h2>Sign in to LeadLift Mail</h2><p>Connect a mailbox only after you sign in. Your email data is separated from other businesses.</p>'+
+ '<form id="authForm"><label class="label">Email</label><input id="email" type="email" autocomplete="username" required placeholder="you@company.com"><label class="label">Password</label><input id="password" type="password" autocomplete="current-password" minlength="6" required placeholder="Your password"><button class="btn" type="submit">Sign in</button></form>'+
+ '<div class="links"><button id="signupBtn">Create account</button><button id="magicBtn">Email me a sign-in link</button></div><div class="divider"></div><button class="btn secondary" id="tryDemo">Explore without connecting email</button><p class="notice">No inbox access is requested until you explicitly connect Gmail or Microsoft 365.</p></div></div>';
+}
+function render(){
+ const pages={inbox:["Priority inbox","High-intent conversations, ranked and ready for action."],handoff:["Human handoffs","Bookings, sensitive decisions and exceptions."],voice:["Writing style","Learn from your sent mail, under your control."],settings:["Connections & controls","Secure OAuth mailboxes and automation safeguards."]};
+ q("#pageTitle").textContent=pages[state.page][0];q("#subtitle").textContent=pages[state.page][1];
+ q("#modeTag").textContent=isDemo()?"Simulated demo":state.session?"Private workspace":"Not signed in";
+ q("#modeTag").className="tag "+(isDemo()?"amber":state.session?"":"gray");
+ q("#demoSwitch").textContent=isDemo()?"Exit demo":"Use demo";
+ q("#syncBtn").style.display=state.session&&!isDemo()&&(state.data.accounts||[]).length?"":"none";
+ q("#logoutBtn").style.display=state.session&&!isDemo()?"":"none";
+ document.querySelectorAll(".nav button[data-page]").forEach(x=>x.classList.toggle("active",x.dataset.page===state.page));
+ let html=(!isDemo()&&!state.session)?loginPage():
+ '<div class="banner"><strong>'+(isDemo()?"Demonstration records — no real email is connected.":"Approval-first email workspace.")+'</strong> '+(isDemo()?"All examples are fictional. Explore scoring and draft actions without connecting a mailbox.":"Inbox ranking is heuristic and must be validated. Every actual send requires approval.")+'</div>'+
+ (state.page==="settings"?connectionPage():state.page==="voice"?voicePage():inbox());
+ q("#content").innerHTML='<div id="globalNote" class="notice hidden"></div>'+html;
+ if(state.note)showNote(state.note,true);
+ hook();
+}
+function hook(){
+ document.querySelectorAll("[data-page]").forEach(x=>x.onclick=()=>switchPage(x.dataset.page));
+ document.querySelectorAll("[data-filter]").forEach(x=>x.onclick=()=>{state.filter=x.dataset.filter;state.selected=null;render()});
+ document.querySelectorAll("[data-message]").forEach(x=>x.onclick=()=>{state.selected=x.dataset.message;render()});
+ document.querySelectorAll("[data-act]").forEach(x=>x.onclick=()=>act(x.dataset.act));
+ document.querySelectorAll("[data-connect]").forEach(x=>x.onclick=()=>connect(x.dataset.connect));
+ document.querySelectorAll("[data-use-account]").forEach(x=>x.onclick=()=>sync(x.dataset.useAccount));
+ document.querySelectorAll("[data-pause]").forEach(x=>x.onclick=()=>changeMode(x.dataset.pause));
+ document.querySelectorAll("[data-disconnect]").forEach(x=>x.onclick=()=>disconnect(x.dataset.disconnect));
+ document.querySelectorAll("[data-train]").forEach(x=>x.onclick=()=>train(x.dataset.train));
+ document.querySelectorAll("[data-consent]").forEach(x=>x.onchange=()=>consent(x.dataset.consent,x.checked));
+ const f=q("#authForm");if(f)f.onsubmit=async(e)=>{e.preventDefault();await auth("signin")};
+ if(q("#signupBtn"))q("#signupBtn").onclick=()=>auth("signup");
+ if(q("#magicBtn"))q("#magicBtn").onclick=()=>auth("magic");
+ if(q("#tryDemo"))q("#tryDemo").onclick=()=>{state.demo=true;switchPage("inbox")};
+}
+async function auth(mode){
+ if(!sdk){showNote("Authentication library failed to load",true);return}
+ const email=q("#email")?.value.trim(),password=q("#password")?.value||"";
+ if(!email){showNote("Enter your email",true);return}
+ let result;
+ if(mode==="signup"){if(!password){showNote("Enter a password",true);return}result=await sdk.auth.signUp({email,password,options:{emailRedirectTo:location.origin+"/assistant.html"}})}
+ else if(mode==="magic")result=await sdk.auth.signInWithOtp({email,options:{emailRedirectTo:location.origin+"/assistant.html"}});
+ else result=await sdk.auth.signInWithPassword({email,password});
+ if(result.error)showNote(result.error.message,true);
+ else if(result.data.session){state.session=result.data.session;await load()}
+ else showNote("Check your email to complete authentication.");
+}
+async function exec(action,body,success){
+ if(isDemo())return;
+ try{const r=await api(Object.assign({action},body||{}));if(success)showNote(success);return r}catch(e){showNote(e.message,true);return null}
+}
+async function connect(provider){try{const r=await api({action:"connect",provider});if(r.url)window.location.assign(r.url)}catch(e){showNote(e.message,true)}}
+async function sync(id){
+ if(state.busy)return;state.busy=true;
+ const ids=id?[id]:(state.data.accounts||[]).map(x=>x.id);
+ try{let total=0;for(const account_id of ids){showNote("Syncing recent email…");const r=await api({action:"sync",account_id});total+=r.processed||0}await load();showNote("Mailbox sync complete: "+total+" messages processed.")}catch(e){showNote(e.message,true)}finally{state.busy=false}
+}
+async function changeMode(id){const a=state.data.accounts.find(x=>x.id===id);await exec(a.send_mode==="paused"?"resume":"pause",{account_id:id});await load()}
+async function disconnect(id){if(!confirm("Disconnect this mailbox and delete ALL its stored messages and style profile?"))return;await exec("disconnect",{account_id:id});await load()}
+async function consent(id,enabled){await exec("consent",{account_id:id,enabled});await load()}
+async function train(id){
+ if(state.training||!confirm("Read up to your last 500 sent emails to learn aggregate writing style? No training email bodies are kept in the style profile."))return;
+ state.training=true;
+ try{
+  let processed=0;
+  for(let i=0;i<22;i++){
+   const r=await api({action:"train",account_id:id});
+   processed+=r.processed||0;
+   await load();showNote("Learning your style: "+r.total+" of 500 sent messages processed.");
+   if(r.complete||r.total>=500||r.processed===0)break;
+  }
+  showNote("Style-learning run finished. "+processed+" sent emails examined in this run.");
+ }catch(e){showNote(e.message,true)}
+ finally{state.training=false}
+}
+async function act(kind){
+ const m=(state.data.messages||[]).find(x=>x.id===state.selected);if(!m)return;
+ const draft=q("#draftText")?.value||"";
+ if(isDemo()){
+  if(kind==="draft"){m.draft_reply="Hi,\n\nThank you for your message. I have noted the details and will confirm the next steps once the information is verified.\n\nKind regards";m.status="drafted"}
+  if(kind==="save"){m.draft_reply=draft;m.status="review"}
+  if(kind==="dismiss"){m.status="dismissed"}
+  if(kind==="send"){showNote("Demo only: sending is disabled.",true);return}
+  render();return;
+ }
+ const account_id=m.account_id,message_id=m.id;
+ try{
+  if(kind==="send"){
+   if(!draft.trim()||!confirm("Send this EXACT message from your connected mailbox to "+m.sender_email+"? This action cannot be undone."))return;
+   await api({action:"send",account_id,message_id,draft,confirm:true});
+  }else if(kind==="save")await api({action:"save_draft",account_id,message_id,draft});
+  else if(kind==="draft")await api({action:"draft",account_id,message_id});
+  else if(kind==="dismiss")await api({action:"dismiss",account_id,message_id});
+  await load();state.selected=message_id;render();showNote(kind==="send"?"Approved reply sent.":"Message updated.");
+ }catch(e){showNote(e.message,true)}
+}
+q("#demoSwitch").onclick=async()=>{state.demo=!state.demo;state.selected=null;await load()};
+q("#syncBtn").onclick=()=>sync();
+q("#logoutBtn").onclick=async()=>{await sdk.auth.signOut();state.session=null;state.data={accounts:[],messages:[],profiles:[],readiness:{}};render()};
+(async()=>{
+ if(sdk){const r=await sdk.auth.getSession();state.session=r.data.session||null;sdk.auth.onAuthStateChange((_,session)=>{state.session=session||null})}
+ if(new URLSearchParams(location.search).get("connection")){state.note="Mailbox connection: "+new URLSearchParams(location.search).get("connection");history.replaceState(null,"",location.pathname)}
+ await load();
+})();
+})();
+</script></body></html>
