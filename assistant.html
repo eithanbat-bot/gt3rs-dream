@@ -65,7 +65,7 @@ function detail(m){
  (m.score_reasons||[]).map(x=>'<span class="pill">'+esc(x)+'</span>').join("")+
  (m.requires_human?'<div class="callout" style="margin-top:15px"><strong>Human decision required.</strong> '+esc(m.brief||"Review this email and related facts before any commitment.")+'</div>':"")+
  '<div class="divider"></div><div class="label">Original message</div><div class="mailbody">'+esc(m.body_text||"No text content")+'</div><div class="divider"></div>'+
- '<div class="label">Proposed reply · '+(m.requires_human?"approval needed":"review before send")+'</div><textarea id="draftText" placeholder="Generate or write a reply…">'+esc(m.draft_reply||"")+'</textarea>'+
+ '<div class="label">Proposed reply · '+(m.requires_human?"approval needed":"review before send")+'</div>'+(m.status==="send_unknown"?'<div class="callout" style="margin-top:9px">Send outcome uncertain. Check your provider Sent Items before any retry. Sending is locked.</div>':"")+'<textarea id="draftText" placeholder="Generate or write a reply…">'+esc(m.draft_reply||"")+'</textarea>'+
  '<div class="actionRow"><button class="btn secondary" data-act="draft">✦ Generate draft</button><button class="btn ghost" data-act="save">Save changes</button><button class="btn" data-act="send" '+(isDemo()?"disabled":"")+'>Send approved reply</button><button class="btn danger" data-act="dismiss">Dismiss</button></div>'+
  '<p style="font-size:11px;color:#84968f;margin-top:12px">'+(isDemo()?"Demo only: no email is sent.":"Sending requires a deliberate confirmation. No automatic messages are currently enabled.")+'</p></div>';
 }
