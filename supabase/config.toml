@@ -1,0 +1,4 @@
+# LeadLift Mail requires a public OAuth callback on the same function URL.
+# All POST actions validate the user's Supabase JWT server-side.
+[functions.mail-assistant]
+verify_jwt = false
