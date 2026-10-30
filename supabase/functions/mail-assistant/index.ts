@@ -165,7 +165,7 @@ async function log(owner:string,account:string|null,msg:string|null,action:strin
 async function ownerOf(req:Request){
  const token=(req.headers.get("Authorization")||"").replace(/^Bearer\s+/i,"");
  if(!token||token===req.headers.get("apikey"))return null;
- const {data,error}=await admin.auth.getUser(token);if(error||!data.user)return null;return data.user;
+ const {data,error}=await admin.auth.getUser(token);if(error||!data.user||!data.user.email_confirmed_at)return null;return data.user;
 }
 async function getAccount(owner:string,id:string){
  const {data,error}=await admin.from("mailbox_accounts").select("*").eq("id",id).eq("owner_user_id",owner).maybeSingle();
