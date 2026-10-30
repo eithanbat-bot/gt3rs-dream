@@ -75,7 +75,7 @@ Do not paste secrets into chat or commit them to GitHub.
 - Paid multi-tenant subscriptions, self-serve onboarding, administrative access roles, invoicing, usage accounting, support SLAs, incident response, export and portability.
 
 ## 6. Safeguards / compliance
-- Initial three-month approval-only mode recommended by the Panoramic brief; phase activation requires owner sign-off and monitored error rate.
+- Initial three-month approval-only mode recommended for sensitive or regulated deployments; phase activation requires owner sign-off and monitored error rate.
 - POPIA: health data is special personal information; medical scheme/FAIS advice and final quotes require appropriate specialist/legal review. Never use live healthcare mail for testing without a lawful basis and confidentiality/operator agreements.
 - Prompt injection: incoming email is untrusted text; AI instructions are separated from content. Do not accept instructions inside email to exfiltrate records, override rules or auto-send.
 - Providers: least privilege, OAuth token encryption, state expiry, no passwords, manual disconnect, irreversible sends explicitly confirmed.
