@@ -55,3 +55,13 @@ GitHub repository is the Vercel production source. The app is a static HTML/CSS/
 - **Database:** mailbox accounts, messages, voice profiles, OAuth states and audit logging. Owner-isolated RLS; server-side encrypted tokens.
 - **What is ready:** demo and web UI, API with OAuth connect/sync/train/draft/send operations, review-only sending controls, rule-based purchase-intent scores and 500-sent-item style training workflow.
 - **What is not live:** OAuth application registration/secrets for Google and Microsoft, encryption key, client consent/verification, actual mailbox integration tests, scheduled background sync, autonomous sending, calibrated conversion probabilities, paid subscriptions. Do not claim a mailbox connection or real email automation has been tested.
+
+## LeadLift Mail account signup and verification (30 October 2026)
+- Signup UI: https://leadlift-gt3rs.vercel.app/assistant.html?signup=1
+- Supabase signup endpoint: `supabase/functions/register-leadlift-user/index.ts` (POST `register`, `resend`; authenticated POST `profile`).
+- Supabase Auth user ID links `leadlift_user_accounts` (email, verified timestamp, subscription status: not_subscribed) with `leadlift_registration_network` (IP when observed, proxy header source, expiry). No customer access to registration IP. Access is service-role only.
+- Supabase Email Auth is enabled, signup permitted, email confirmation required (`mailer_autoconfirm=false` checked via Auth public settings endpoint on 30 Oct).
+- Default Supabase Auth SMTP is not production capable for arbitrary addresses (authorized team emails only; low hourly quota). **Configure custom SMTP and allowed Auth redirect URI** `https://leadlift-gt3rs.vercel.app/assistant.html?verification=complete` via Supabase dashboard before offering public verification.
+- `pg_cron` cleanup `leadlift_purge_signup_ip_daily` executes once per day to purge network rows past 90 days. IP metadata is for account security only, never payment identity or marketing.
+- Exact account pages and API validation tests performed; **real verification delivery and full account sign-in need a controlled test with a permitted email inbox and confirmed SMTP**, not simulated success.
+- No subscription provider or payment charge is configured as part of registration.
