@@ -46,3 +46,12 @@ GitHub repository is the Vercel production source. The app is a static HTML/CSS/
 - **Production code:** published to Vercel by source-file deployment. GitHub-to-Vercel automatic linking is not yet enabled because the Vercel GitHub integration is absent.
 - **Handover and commercial dependencies:** `sales/product-handover-checklist.md`. Seller legal identity and full terms must be completed before payment collection. Legal and platform identification cannot be misrepresented to conceal the seller.
 - **Verification:** production routes returned HTTP 200; backend rejected anonymous workspace creation 401, disabled checkout 503, invalid widget 404; static module script syntax checked and widget parser passed. Full genuine customer payment/webhook, interactive browser UI and multi-tenant access tests with real accounts are not yet verified. Do not state that there are paying customers unless the database and payment provider confirm it.
+
+
+## LeadLift Mail B2B inbox copilot (30 October 2026)
+- **Deployed web app and fictional interactive demo:** https://leadlift-gt3rs.vercel.app/assistant.html?demo=1
+- **Product plan / launch checklist:** [LEADLIFT_MAIL_PLAN.md](LEADLIFT_MAIL_PLAN.md)
+- **Backend source:** [supabase/functions/mail-assistant/index.ts](supabase/functions/mail-assistant/index.ts)
+- **Database:** mailbox accounts, messages, voice profiles, OAuth states and audit logging. Owner-isolated RLS; server-side encrypted tokens.
+- **What is ready:** demo and web UI, API with OAuth connect/sync/train/draft/send operations, review-only sending controls, rule-based purchase-intent scores and 500-sent-item style training workflow.
+- **What is not live:** OAuth application registration/secrets for Google and Microsoft, encryption key, client consent/verification, actual mailbox integration tests, scheduled background sync, autonomous sending, calibrated conversion probabilities, paid subscriptions. Do not claim a mailbox connection or real email automation has been tested.
