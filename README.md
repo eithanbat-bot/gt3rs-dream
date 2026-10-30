@@ -65,3 +65,10 @@ GitHub repository is the Vercel production source. The app is a static HTML/CSS/
 - `pg_cron` cleanup `leadlift_purge_signup_ip_daily` executes once per day to purge network rows past 90 days. IP metadata is for account security only, never payment identity or marketing.
 - Exact account pages and API validation tests performed; **real verification delivery and full account sign-in need a controlled test with a permitted email inbox and confirmed SMTP**, not simulated success.
 - No subscription provider or payment charge is configured as part of registration.
+
+## Auth redirect and transactional email configuration (30 October 2026)
+- **Live registration:** https://leadlift-gt3rs.vercel.app/assistant.html?signup=1
+- **Hosted auth setup:** [supabase/SMTP_AND_AUTH_SETUP.md](supabase/SMTP_AND_AUTH_SETUP.md).
+- **Confirmation email template:** [supabase/email-templates/confirmation.html](supabase/email-templates/confirmation.html).
+- The registration backend and passwordless frontend now point to the **exact** `https://leadlift-gt3rs.vercel.app/assistant.html` callback. The local config file also sets LeadLift Auth URLs, but **hosted Supabase Auth URL Configuration must separately set Site URL and Redirect URLs**. A diagnostic probe showed the hosted service was still redirecting to `http://localhost:3000`; that dashboard setting is not modified by the local config.
+- Branded email template and recommended Resend SMTP field values are prepared; custom SMTP is **not enabled or tested**. A verified LeadLift-owned sending domain and private SMTP credentials are required before public delivery is ready. Never commit the key.
