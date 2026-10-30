@@ -5,7 +5,7 @@ const publicKey=Deno.env.get("SUPABASE_ANON_KEY")||"";
 const admin=createClient(supabaseUrl,serviceKey,{auth:{autoRefreshToken:false,persistSession:false}});
 const authClient=createClient(supabaseUrl,publicKey,{auth:{autoRefreshToken:false,persistSession:false}});
 const originAllowed="https://leadlift-gt3rs.vercel.app";
-const redirectTo=originAllowed+"/assistant.html?verification=complete";
+const redirectTo=originAllowed+"/assistant.html";
 function response(data:unknown,status=200){
  return new Response(JSON.stringify(data),{status,headers:{"Content-Type":"application/json","Access-Control-Allow-Origin":originAllowed,"Access-Control-Allow-Methods":"POST,OPTIONS","Access-Control-Allow-Headers":"Content-Type,Authorization,apikey","Cache-Control":"no-store","Vary":"Origin"}});
 }
