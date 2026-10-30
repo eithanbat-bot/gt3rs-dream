@@ -173,7 +173,7 @@ async function auth(mode){
  const email=q("#email")?.value.trim(),password=q("#password")?.value||"";
  if(!email){showNote("Enter your email",true);return}
  let result;
- if(mode==="magic")result=await sdk.auth.signInWithOtp({email,options:{emailRedirectTo:location.origin+"/assistant.html?verification=complete"}});
+ if(mode==="magic")result=await sdk.auth.signInWithOtp({email,options:{emailRedirectTo:"https://leadlift-gt3rs.vercel.app/assistant.html"}});
  else result=await sdk.auth.signInWithPassword({email,password});
  if(result.error)showNote(result.error.message,true);
  else if(result.data.session){state.session=result.data.session;await load()}
@@ -233,7 +233,7 @@ q("#syncBtn").onclick=()=>sync();
 q("#logoutBtn").onclick=async()=>{await sdk.auth.signOut();state.session=null;state.data={accounts:[],messages:[],profiles:[],readiness:{}};state.identity=null;state.authView="signin";render()};
 (async()=>{
  if(sdk){const r=await sdk.auth.getSession();state.session=r.data.session||null;sdk.auth.onAuthStateChange((_,session)=>{state.session=session||null})}
- if(new URLSearchParams(location.search).get("verification")==="complete" && !state.session)state.note="Verify your account using the email link, then sign in.";
+ if(new URLSearchParams(location.search).get("verification")==="complete" && !state.session)state.note="Verify your email with the latest confirmation link, then sign in.";
  if(new URLSearchParams(location.search).get("connection")){state.note="Mailbox connection: "+new URLSearchParams(location.search).get("connection");history.replaceState(null,"",location.pathname)}
  await load();
 })();
