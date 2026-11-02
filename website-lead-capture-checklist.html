@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Practical website enquiry form reliability checklist for South African service businesses: saved submissions, retries, spam controls, privacy, testing and handover.">
+<meta property="og:title" content="Website lead capture reliability checklist | LeadLift">
+<meta property="og:description" content="Eight checks to help ensure website enquiries are saved, acknowledged and assigned without misleading visitors.">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://leadlift-gt3rs.vercel.app/website-lead-capture-checklist.html">
+<title>Website lead capture reliability checklist for service businesses | LeadLift</title>
+<style>
+:root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:#f6f7f1;color:#12313b;line-height:1.7}*{box-sizing:border-box}body{margin:0}a{color:#096c59}a:focus-visible{outline:3px solid #159f83;outline-offset:3px}header,footer{background:#081b28;color:#d5ece7;padding:22px max(22px,calc((100vw - 900px)/2))}header a,footer a{color:#9ff2d8}header a{font-size:22px;font-weight:850;text-decoration:none}main{max-width:900px;margin:auto;padding:56px 22px 90px}.eyebrow{font-size:12px;color:#137a63;text-transform:uppercase;letter-spacing:.14em;font-weight:800}h1{font-size:clamp(35px,5vw,54px);line-height:1.12;letter-spacing:-.045em;margin:12px 0 20px}h2{font-size:25px;line-height:1.25;margin:35px 0 12px}p,li{color:#435e66}.intro{font-size:18px}.card{background:#fff;border:1px solid #d9e6e0;border-radius:14px;padding:26px 32px;margin:25px 0;box-shadow:0 8px 32px #0c2b2e0a}.card h2:first-child{margin-top:0}.check{padding:17px 0;border-bottom:1px solid #e5eee8}.check:last-child{border:0}.check h3{margin:0 0 7px;font-size:19px}.check p{margin:0}.callout{background:#e9f5ef;border-left:5px solid #169274;padding:20px 25px;border-radius:8px}.cta{display:inline-block;background:#0a705a;color:#fff;padding:13px 19px;border-radius:8px;text-decoration:none;font-weight:800}.cta:hover{background:#075641}.small{font-size:13px;color:#61767a}ol{padding-left:24px}li{margin:8px 0}footer{font-size:14px}@media(max-width:600px){main{padding-top:36px}.card{padding:20px}}
+</style>
+</head>
+<body>
+<header><a href="/">↗ LeadLift.</a></header>
+<main>
+<p class="eyebrow">Free operational guide · South Africa · 2 November 2026</p>
+<h1>Website lead capture reliability: eight checks before buying more traffic</h1>
+<p class="intro">A form that looks polished is not necessarily a reliable enquiry channel. Before investing in search, social content or paid advertising, confirm that a real visitor can submit a request, receive an accurate result and reach the right person on your team.</p>
+<p>This checklist is for service businesses using a website enquiry form. It is a general implementation guide, not a claim that any particular software or integration is already installed.</p>
+<section class="card" aria-labelledby="checks">
+<h2 id="checks">The eight-point checklist</h2>
+<div class="check"><h3>1. Save before showing success</h3><p>Only display “Request received” after the server confirms the enquiry was stored. A button click, redirect or email attempt is not proof of persistence. Give the visitor a reference where practical, without exposing another person's details.</p></div>
+<div class="check"><h3>2. Make failures retryable</h3><p>Network interruptions and database errors happen. Preserve the visitor's typed fields, explain the problem without technical jargon and allow a safe retry. Do not permanently rate-limit someone because an earlier save failed.</p></div>
+<div class="check"><h3>3. Protect against duplicate submissions</h3><p>Double-clicks, browser retries and slow connections can create duplicates. Use server-side idempotency or a well-designed deduplication process where appropriate. A repeated request should not silently become a second sales opportunity.</p></div>
+<div class="check"><h3>4. Keep spam controls separate from valid enquiries</h3><p>Apply reasonable limits and bot checks without blocking genuine visitors unnecessarily. Measure rejection rates and investigate spikes. Avoid using a single global limit that allows one noisy source to prevent everyone else from contacting you.</p></div>
+<div class="check"><h3>5. Ask for only what you need</h3><p>Start with contact details and information needed to respond to the specific request. Explain why the information is collected, link to a clear privacy notice and avoid asking visitors to upload sensitive records or passwords. A request to be contacted about an enquiry is not blanket marketing consent.</p></div>
+<div class="check"><h3>6. Route to a named owner</h3><p>Assign each successfully saved enquiry to a responsible person or monitored queue. Include an escalation path for absences and urgent requests. A successful database insert without an operational handover is still a missed opportunity.</p></div>
+<div class="check"><h3>7. Measure real outcomes</h3><p>Separate form views, submission attempts, stored enquiries, qualified enquiries, replies, proposals and paid orders. Track errors and genuine delivery confirmations. Do not count checkout redirects as payments or spam as customers.</p></div>
+<div class="check"><h3>8. Test the complete journey</h3><p>With authorized test data in a safe environment, check desktop and mobile, invalid input, server failure, retry, duplicate submission, rate limits and handover. Remove test records from business reporting and verify privacy/access controls.</p></div>
+</section>
+<section aria-labelledby="weekly">
+<h2 id="weekly">A simple weekly review</h2>
+<p>Review the numbers below together rather than treating a rise in form submissions as a sales result:</p>
+<ol>
+<li><strong>Submission reliability:</strong> successful saved enquiries divided by valid submission attempts, with failures investigated.</li>
+<li><strong>First response:</strong> median time from saved enquiry to a meaningful human response, measured during agreed staffed hours.</li>
+<li><strong>Ownership:</strong> share of saved enquiries with a named owner and a documented next action.</li>
+<li><strong>Commercial outcomes:</strong> qualified conversations, proposals and independently confirmed paid orders, each recorded separately.</li>
+</ol>
+<div class="callout"><strong>Practical rule:</strong> if the system cannot prove that a request was stored, it must not tell the visitor that the request was received. Fix this before purchasing more traffic.</div>
+</section>
+<section aria-labelledby="next">
+<h2 id="next">What to do next</h2>
+<p>Start with the <a href="/lead-response-audit.html">free lead response audit</a> to identify process gaps, then use the <a href="/lead-follow-up-sop.html">follow-up SOP and weekly scorecard</a> to establish ownership. LeadLift can scope an implementation with your existing systems; integrations, permissions and testing must be agreed before deployment.</p>
+<p><a class="cta" href="/#contact">Request an implementation demo ↗</a></p>
+<p class="small">No guarantee of additional sales, appointments or revenue. This page provides general operational guidance, not legal advice. No customer information is collected on this page.</p>
+</section>
+</main>
+<footer><a href="/">LeadLift home</a> · <a href="/privacy.html">Privacy notice</a> · <a href="/lead-response-audit.html">Free audit</a></footer>
+</body>
+</html>
