@@ -80,27 +80,37 @@ Deno.serve(async (req: Request) => {
   const ip = req.headers.get("cf-connecting-ip") || req.headers.get("x-real-ip") || "unattributed";
   const ipHash = await sha256(svcKey.slice(0, 32) + "|ip|" + ip);
   const emailHash = await sha256(svcKey.slice(0, 32) + "|email|" + email);
-  const minutes15 = new Date(Date.now() - 15 * 60_000).toISOString();
-  const day1 = new Date(Date.now() - 24 * 60 * 60_000).toISOString();
-  const hour1 = new Date(Date.now() - 60 * 60_000).toISOString();
-
-  const [fromIp, fromEmail, globalCount] = await Promise.all([
-    db.from("lead_submission_attempts").select("*", { count: "exact", head: true }).eq("ip_fingerprint", ipHash).gte("created_at", minutes15),
-    db.from("lead_submission_attempts").select("*", { count: "exact", head: true }).eq("email_fingerprint", emailHash).gte("created_at", day1),
-    db.from("lead_submission_attempts").select("*", { count: "exact", head: true }).gte("created_at", hour1)
-  ]);
-  if ([fromIp, fromEmail, globalCount].some(x => x.error)) return json({ error: "Please try again later." }, 503, origin);
-  if ((fromIp.count ?? 0) >= 5 || (fromEmail.count ?? 0) >= 1 || (globalCount.count ?? 0) >= 60) {
-    return json({ error: "A request from this contact or connection was received recently. Please try again later." }, 429, origin, { "Retry-After": "3600" });
+  // Rate limits and both inserts run in one Postgres transaction. A failed lead
+  // insert cannot leave an attempt that blocks a genuine visitor's retry.
+  const { data, error } = await db.rpc("submit_lead_atomic", {
+    p_ip_fingerprint: ipHash,
+    p_email_fingerprint: emailHash,
+    p_business_name: business_name,
+    p_contact_name: contact_name,
+    p_email: email,
+    p_phone: phone,
+    p_industry: industry,
+    p_monthly_enquiries: monthly_enquiries,
+    p_current_process: current_process,
+    p_challenge: challenge,
+    p_utm_source: clean(body.utm_source, 60),
+    p_utm_medium: clean(body.utm_medium, 60),
+    p_utm_campaign: clean(body.utm_campaign, 60)
+  });
+  if (error) {
+    console.error("Atomic lead persistence failed", error.code ?? "unknown");
+    return json({ error: "We could not save your request. Please try again later." }, 503, origin);
   }
-
-  const attempt = await db.from("lead_submission_attempts").insert({ ip_fingerprint: ipHash, email_fingerprint: emailHash, action: "submitted" });
-  if (attempt.error) return json({ error: "Please try again later." }, 503, origin);
-  const result = await db.from("inbound_leads").insert({
-    business_name, contact_name, email, phone, industry,
-    monthly_enquiries, current_process, challenge,
-    source: "gt3rs-marketing-site", utm_source:clean(body.utm_source,60),utm_medium:clean(body.utm_medium,60),utm_campaign:clean(body.utm_campaign,60), consent_to_contact: true, consent_at: new Date().toISOString()
-  }).select("id").single();
-  if (result.error) return json({ error: "We could not save your request. Please try again later." }, 503, origin);
-  return json({ ok: true, reference: result.data.id }, 201, origin);
+  if (data?.status === "rate_limited") {
+    const seconds = Number(data.retry_after_seconds) || 3600;
+    return json({ error: "A request from this contact or connection was received recently. Please try again later." },
+      429, origin, { "Retry-After": String(seconds) });
+  }
+  if (data?.status === "invalid") {
+    return json({ error: "Please check the request details and try again." }, 400, origin);
+  }
+  if (data?.status !== "saved" || typeof data.lead_id !== "string") {
+    return json({ error: "We could not confirm your request was saved. Please try again later." }, 503, origin);
+  }
+  return json({ ok: true, reference: data.lead_id }, 201, origin);
 });
