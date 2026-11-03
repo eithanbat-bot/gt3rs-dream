@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#081b28">
+<meta name="description" content="Free South African lead follow-up opportunity calculator. Estimate the possible impact of responding to more enquiries using your own assumptions; no data is collected.">
+<link rel="canonical" href="https://leadlift-gt3rs.vercel.app/lead-follow-up-calculator.html">
+<meta property="og:title" content="Lead Follow-up Opportunity Calculator | LeadLift">
+<meta property="og:description" content="Model enquiry response improvements with transparent assumptions, not promises.">
+<title>Lead Follow-up Opportunity Calculator | LeadLift South Africa</title>
+<style>
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:#16313a;background:#f5f8f4;line-height:1.6}*{box-sizing:border-box}body{margin:0}a{color:#0b7660}a:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid #16a47d;outline-offset:3px}.wrap{max-width:1060px;margin:auto;padding:0 22px}header{background:#091f2b;color:white;padding:18px 0}header .wrap{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}header a{color:#d8f5eb;text-decoration:none}header strong{font-size:22px;letter-spacing:-.04em}header nav{display:flex;gap:20px;font-size:13px}.hero{background:linear-gradient(125deg,#082432,#145244);color:#fff;padding:66px 0 70px}.eyebrow{text-transform:uppercase;letter-spacing:.16em;color:#86e9c7;font-weight:800;font-size:12px}h1{font-size:clamp(36px,5vw,58px);letter-spacing:-.06em;line-height:1.1;margin:14px 0 20px}h2{font-size:30px;letter-spacing:-.04em;line-height:1.2}.hero p{max-width:740px;color:#c9e3df;font-size:17px}.badge{display:inline-block;border:1px solid #599d8a;border-radius:99px;padding:7px 12px;font-size:12px;color:#dcfff4}.layout{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;margin-top:-34px;position:relative}.panel{background:#fff;border:1px solid #d8e8e1;border-radius:16px;padding:28px;box-shadow:0 12px 40px #143c2b12}.panel h2{margin:0 0 8px}.muted{color:#506a70;font-size:14px}.field{margin:18px 0}.field label{display:flex;justify-content:space-between;gap:10px;font-weight:750;font-size:14px}.field small{display:block;color:#61747b;font-size:12px;margin-top:5px}.field input{width:100%;margin-top:8px;border:1px solid #afc9c1;border-radius:8px;padding:12px;font:inherit}.results{background:#e8f7f0;border:1px solid #b8e1cd;border-radius:12px;padding:20px}.results dl{margin:0}.results dl div{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:13px 0;border-bottom:1px solid #c9e6d8}.results dl div:last-child{border:0}.results dt{font-size:13px;color:#305e54}.results dd{font-size:23px;font-weight:850;margin:0;text-align:right;color:#0b5d4c}.note{font-size:12px;color:#536c69}.btn{display:inline-block;background:#087a5f;color:white;padding:13px 20px;border-radius:9px;font-weight:800;text-decoration:none;border:0;cursor:pointer}.btn:hover{background:#065b47}.btn.secondary{background:#e1f0e8;color:#075a46}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}.article{padding:46px 0 75px}.article p,.article li{color:#45646b}.article li{margin:9px 0}.article section{margin-bottom:35px}.formula{background:#fff;border-left:4px solid #16a47d;padding:18px 22px;border-radius:8px;font-size:14px}.cta{background:#0c3038;color:#fff;border-radius:15px;padding:27px;margin-top:28px}.cta p{color:#c4dcd7}.cta a{background:#6ee0b6;color:#073126}.footer{background:#071e2b;color:#d0e5e0;padding:26px 0;font-size:13px}.footer a{color:#b9f1df}@media(max-width:780px){.layout{grid-template-columns:1fr}.hero{padding:48px 0 70px}.panel{padding:22px}header nav{gap:12px}h2{font-size:26px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a href="/" aria-label="LeadLift home"><strong>↗ LeadLift.</strong></a><nav aria-label="Main navigation"><a href="/">Home</a><a href="/lead-response-audit.html">Self-audit</a><a href="/#contact">Request a demo</a></nav></div></header>
+<main>
+<section class="hero"><div class="wrap"><div class="eyebrow">Free operational planning tool</div><h1>What could better enquiry follow-up be worth?</h1><p>Use your own enquiry volumes and conversion assumptions to explore a scenario. This is an arithmetic planning tool—not a forecast, a promise of additional sales or evidence of LeadLift customer results.</p><span class="badge">Calculates locally in your browser · No information submitted</span></div></section>
+<div class="wrap layout">
+<section class="panel" aria-labelledby="inputsTitle"><h2 id="inputsTitle">Your assumptions</h2><p class="muted">Use observed figures where possible. The default numbers are fictional examples and are not industry benchmarks.</p>
+<div class="field"><label for="volume">New enquiries each month</label><input type="number" id="volume" min="0" max="100000" step="1" value="40" inputmode="numeric"><small>Count unique legitimate enquiries, not impressions or spam.</small></div>
+<div class="field"><label for="current">Currently receiving a timely response (%)</label><input type="number" id="current" min="0" max="100" step="1" value="60" inputmode="decimal"><small>Measure from timestamps against your team's own service target.</small></div>
+<div class="field"><label for="future">Scenario: timely response rate (%)</label><input type="number" id="future" min="0" max="100" step="1" value="85" inputmode="decimal"><small>A scenario, not an achievable or guaranteed result.</small></div>
+<div class="field"><label for="opportunity">Responded enquiries becoming qualified opportunities (%)</label><input type="number" id="opportunity" min="0" max="100" step="1" value="35" inputmode="decimal"></div>
+<div class="field"><label for="close">Qualified opportunities becoming sales (%)</label><input type="number" id="close" min="0" max="100" step="1" value="25" inputmode="decimal"></div>
+<div class="field"><label for="margin">Average contribution per additional sale (R)</label><input type="number" id="margin" min="0" max="100000000" step="100" value="5000" inputmode="decimal"><small>Use revenue minus variable fulfilment costs; not gross revenue.</small></div>
+<div class="actions"><button type="button" id="reset" class="btn secondary">Reset example</button></div><p id="validation" class="note" role="status" aria-live="polite"></p>
+</section>
+<section class="panel" aria-labelledby="resultsTitle"><h2 id="resultsTitle">Illustrative monthly difference</h2><p class="muted">Assumes every newly responded enquiry behaves like your existing responded enquiries. Real outcomes may differ substantially.</p>
+<div class="results" aria-live="polite"><dl><div><dt>Additional enquiries responded to on time</dt><dd id="extra">—</dd></div><div><dt>Additional qualified opportunities (expected value)</dt><dd id="opps">—</dd></div><div><dt>Additional sales (expected value)</dt><dd id="sales">—</dd></div><div><dt>Potential monthly contribution (before fixed costs)</dt><dd id="value">—</dd></div></dl></div>
+<p class="note">Fractional sales are statistical expected values, not actual orders. This excludes setup costs, monthly fees, lead quality changes, sales capacity, churn, taxes and any causal effect of response time.</p>
+<div class="cta"><h2>Want to improve the process—not just the spreadsheet?</h2><p>LeadLift can review where your enquiries arrive, who owns the follow-up and how your team records outcomes. No appointment or financial result is guaranteed.</p><a class="btn" href="/#contact">Request a workflow review ↗</a><p style="font-size:12px">This form is an enquiry, not a payment or booking checkout.</p></div>
+</section>
+</div>
+<div class="wrap article">
+<section><h2>How the calculation works</h2><div class="formula">Additional timely responses = monthly enquiries × max(0, scenario response rate − current response rate). Additional opportunities = additional responses × opportunity rate. Additional sales = opportunities × close rate. Illustrative contribution = additional sales × average contribution per sale.</div><p>If the scenario response rate is lower than your current rate, the calculator shows zero incremental upside rather than presenting a negative change as an opportunity.</p></section>
+<section><h2>Measure your baseline before estimating</h2><ol><li>Define a legitimate new enquiry and remove spam, duplicates and existing support cases.</li><li>Choose a realistic response-time target for each channel; urgent safety matters require human escalation.</li><li>Record the received time, first meaningful response time, assigned owner, qualified status and final outcome.</li><li>Calculate response and conversion rates over a defined period. Check that your team can fulfil any additional work.</li><li>Review results weekly, and compare like-for-like enquiry sources before attributing changes to a new process.</li></ol></section>
+<section><h2>Important limitations</h2><p>A faster response alone does not establish causation or create demand. Lead quality, pricing, seasonal demand, staff capacity and customer preferences affect conversion. No third-party integrations, WhatsApp sending or automated appointments are demonstrated by this tool. It collects no input values and makes no network requests.</p></section>
+</div>
+</main>
+<footer class="footer"><div class="wrap">LeadLift · South African service-business enquiry workflows · <a href="/privacy.html">Privacy notice</a> · <a href="/">Home</a></div></footer>
+<script>
+(function(){
+'use strict';
+const ids=['volume','current','future','opportunity','close','margin'];
+const defaults=[40,60,85,35,25,5000];
+const format=new Intl.NumberFormat('en-ZA',{maximumFractionDigits:2});
+const rand=new Intl.NumberFormat('en-ZA',{style:'currency',currency:'ZAR',maximumFractionDigits:0});
+function update(){
+const values=ids.map(id=>Number(document.getElementById(id).value));
+const valid=values.every((n,i)=>Number.isFinite(n)&&n>=0&&n<=(i===0?100000:i===5?100000000:100))&&Number.isInteger(values[0]);
+document.getElementById('validation').textContent=valid?'':'Enter valid, non-negative values (percentages from 0 to 100; whole enquiries only).';
+if(!valid){['extra','opps','sales','value'].forEach(id=>document.getElementById(id).textContent='—');return;}
+const [volume,current,future,opportunity,close,margin]=values;
+const extra=volume*Math.max(0,future-current)/100;
+const opps=extra*opportunity/100;
+const sales=opps*close/100;
+document.getElementById('extra').textContent=format.format(extra);
+document.getElementById('opps').textContent=format.format(opps);
+document.getElementById('sales').textContent=format.format(sales);
+document.getElementById('value').textContent=rand.format(sales*margin);
+}
+ids.forEach(id=>document.getElementById(id).addEventListener('input',update));
+document.getElementById('reset').addEventListener('click',()=>{ids.forEach((id,i)=>document.getElementById(id).value=String(defaults[i]));update();});
+update();
+})();
+</script>
+</body></html>
